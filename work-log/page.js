@@ -36,7 +36,7 @@ function selectPath(index){
  document.querySelector('#path-kind').textContent=step.kind;
  document.querySelector('#path-explanation').textContent=step.explanation;
  expand.hidden=Boolean(step.video);video.hidden=!step.video;
- if(!step.video){const src=`./assets/${step.image}?v=story6`;pathImage.src=src;pathImage.alt=step.alt;expand.dataset.image=src;expand.dataset.caption=`${step.title} · ${step.kind}`;}
+ if(!step.video){const src=`./assets/${step.image}?v=reading7`;pathImage.src=src;pathImage.alt=step.alt;expand.dataset.image=src;expand.dataset.caption=`${step.title} · ${step.kind}`;}
  document.querySelector('#path-prev').disabled=index===0;
  document.querySelector('#path-next').disabled=index===pathSteps.length-1;
  requestAnimationFrame(updateReading);
