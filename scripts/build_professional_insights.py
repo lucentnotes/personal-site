@@ -74,13 +74,15 @@ def article_media(index):
             screens.append(interface_figure(filename, title, width, height))
         return {'Three experiences helped me examine that gap: a parenting simulation, an AI digital human, and a companion toy for children.': '<div class="ui-pair">' + ''.join(screens) + '</div>'}
     if index == 1:
-        return {'First, products should identify which educational responsibilities parents actually want to delegate. Routine practice, progress tracking, reminders, and basic feedback may be suitable areas for technological support. However, these functions should not be assumed to replace every form of parental guidance. A product that generates progress reports, for example, should help parents understand what the information means and what they can do with it, rather than merely adding another monitoring task.': interface_figure('growth-home.webp', 'Growth Centre · Parent dashboard', 1206, 2483, single=True)}
+        return {
+            'In this scenario, the parent would not need to be physically present throughout the learning process. Instead, technology could take on some routine responsibilities while allowing the parent to remain informed and make decisions when necessary.': '<div class="ui-pair">' + interface_figure('chat-records.webp', 'Chat records · Parent view', 1206, 2464) + interface_figure('chat-detail.webp', 'Chat detail', 1206, 2622) + '</div>',
+            'First, products should identify which educational responsibilities parents actually want to delegate. Routine practice, progress tracking, reminders, and basic feedback may be suitable areas for technological support. However, these functions should not be assumed to replace every form of parental guidance. A product that generates progress reports, for example, should help parents understand what the information means and what they can do with it, rather than merely adding another monitoring task.': interface_figure('growth-home.webp', 'Growth Centre · Parent dashboard', 1206, 2483, single=True)}
     if index == 2:
         return {
             "The team introduced a habit-building package that connected the parent-facing mini-program with the child's interaction with the toy.": '<div class="ui-pair">' + interface_figure('growth-library.webp', 'Animation library', 1206, 2458) + interface_figure('growth-detail.webp', 'Animation series · Detail', 1206, 2467) + '</div>',
             'Parents could access a growth-goal section in the mini-program. Children first watched short animations created by the team, covering habits and everyday safety topics such as brushing teeth and looking at traffic lights before crossing the road. After an animation, the system generated a corresponding growth goal for the parent to review and confirm.': '<figure class="product-animation"><video controls playsinline preload="none" poster="../media/animation-poster.webp" width="1024" height="576" aria-label="Product animation: brushing teeth"><source src="../media/theme-animation.mp4" type="video/mp4"><a href="../media/theme-animation.mp4">Watch the animation</a></video><figcaption>Product animation · Brushing teeth</figcaption></figure>'}
     if index == 3:
-        return {'However, once a product reaches an acceptable level of quality and can reliably fulfil its main purpose, the factors influencing further growth may change. Sales, marketing, distribution channels, and operational execution can become increasingly important.': interface_figure('shop.webp', 'Mini-program shop · Interface reference', 1206, 2461, single=True)}
+        return {'However, once a product reaches an acceptable level of quality and can reliably fulfil its main purpose, the factors influencing further growth may change. Sales, marketing, distribution channels, and operational execution can become increasingly important.': '<div class="ui-pair">' + interface_figure('shop.webp', 'Mini-program shop · Interface reference', 1206, 2461) + interface_figure('camp.webp', 'Third-party study camp · Product detail', 1206, 2471) + '</div>'}
     return {}
 
 MARK = '<svg class="insights-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 27V5h12v42M18 5h11v11H18v11h11"/><circle cx="9" cy="11" r="1.5" fill="currentColor" stroke="none"/></svg>'
@@ -95,9 +97,12 @@ MEDIA_ZH = {
     'Scenario simulation': '场景模拟',
     'Digital human · Teacher Ale': '数字人阿乐老师建议',
     'Growth Centre · Parent dashboard': '成长中心 · 家长端',
+    'Chat records · Parent view': '家长端 · 聊天记录',
+    'Chat detail': '对话详情',
     'Animation library': '动画内容',
     'Animation series · Detail': '动画详情',
     'Mini-program shop · Interface reference': '小乐商城 · 界面示例',
+    'Third-party study camp · Product detail': '第三方研学产品 · 商品详情',
     'Product animation: brushing teeth': '产品动画：刷牙主题',
     'Product animation · Brushing teeth': '产品动画示例 · 刷牙主题',
     'Watch the animation': '播放动画',
