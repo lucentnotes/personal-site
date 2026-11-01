@@ -46,6 +46,10 @@ def render_body(blocks, inserts=None):
             output.append(inserts[block])
     return '\n'.join(output), '\n'.join(toc)
 
+def interface_figure(filename, title, width, height, single=False):
+    classes = 'ui-screen ui-single' if single else 'ui-screen'
+    return f'<figure class="{classes}"><a href="../media/{filename}" data-screen aria-label="Enlarge {title}"><img src="../media/{filename}" alt="{title} mini-program interface" width="{width}" height="{height}" loading="lazy" decoding="async"></a><figcaption>{title}</figcaption></figure>'
+
 def article_media(index):
     if index == 0:
         screens = []
@@ -53,10 +57,16 @@ def article_media(index):
             ('scenario.webp', 'Scenario simulation', 1206, 2484),
             ('digital-human.webp', 'Digital human · Teacher Ale', 1206, 2486),
         ]:
-            screens.append(f'<figure class="ui-screen"><a href="../media/{filename}" data-screen aria-label="Enlarge {title}"><img src="../media/{filename}" alt="{title} mini-program interface" width="{width}" height="{height}" loading="lazy" decoding="async"></a><figcaption>{title}</figcaption></figure>')
+            screens.append(interface_figure(filename, title, width, height))
         return {'Three experiences helped me examine that gap: a parenting simulation, an AI digital human, and a companion toy for children.': '<div class="ui-pair">' + ''.join(screens) + '</div>'}
+    if index == 1:
+        return {'I would also consider the work the product introduces. Selecting content, configuring goals, interpreting reports, and deciding what to do next can require parental effort. Those activities may be worthwhile, but they belong in any assessment of a promise to reduce supervision.': interface_figure('growth-home.webp', 'Growth Centre · Parent dashboard', 1206, 2483, single=True)}
     if index == 2:
-        return {'The experience combined animated educational content, parental goal-setting, scheduled reminders, NFC cards, and question-based interactions. This provided a more specific context for the product than open-ended conversation alone.': '<figure class="product-animation"><video controls playsinline preload="none" poster="../media/animation-poster.webp" width="1024" height="576" aria-label="Product animation: brushing teeth"><source src="../media/theme-animation.mp4" type="video/mp4"><a href="../media/theme-animation.mp4">Watch the animation</a></video><figcaption>Product animation · Brushing teeth</figcaption></figure>'}
+        return {
+            'The team later explored positioning the toy as a habit-building assistant for children aged three to six.': '<div class="ui-pair">' + interface_figure('growth-library.webp', 'Animation library', 1206, 2458) + interface_figure('growth-detail.webp', 'Animation series · Detail', 1206, 2467) + '</div>',
+            'The experience combined animated educational content, parental goal-setting, scheduled reminders, NFC cards, and question-based interactions. This provided a more specific context for the product than open-ended conversation alone.': '<figure class="product-animation"><video controls playsinline preload="none" poster="../media/animation-poster.webp" width="1024" height="576" aria-label="Product animation: brushing teeth"><source src="../media/theme-animation.mp4" type="video/mp4"><a href="../media/theme-animation.mp4">Watch the animation</a></video><figcaption>Product animation · Brushing teeth</figcaption></figure>'}
+    if index == 3:
+        return {'This was also where commercial communication and product design met. The way a capability was presented helped define the standard against which the family would judge it.': interface_figure('shop.webp', 'Mini-program shop · Interface reference', 1206, 2461, single=True)}
     return {}
 
 MARK = '<svg class="insights-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 27V5h12v42M18 5h11v11H18v11h11"/><circle cx="9" cy="11" r="1.5" fill="currentColor" stroke="none"/></svg>'
@@ -71,7 +81,7 @@ def shell(title, inner, detail=False, slug='', description=''):
 <meta name="description" content="{escape(description, quote=True)}">
 <link rel="canonical" href="{BASE + (slug + '/' if slug else '')}">
 <link rel="icon" href="{prefix}mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="{prefix}style.css?v=insights5"><script src="{prefix}reading.js?v=insights5" defer></script></head>
+<link rel="stylesheet" href="{prefix}style.css?v=insights6"><script src="{prefix}reading.js?v=insights6" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a><div class="site"><header class="top"><a class="brand" href="{prefix}">{MARK}Professional Insights</a></header>
 {inner}</div></body></html>'''
 
