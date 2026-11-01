@@ -10,3 +10,5 @@ html[lang=zh-CN] h1,html[lang=zh-CN] .entry h2{text-wrap:balance}
 /* Clip only the phone status bar; preserve every pixel of the app interface. */
 .screen-crop{display:block;overflow:hidden;border:1px solid var(--line);border-radius:4px}.screen-crop img{border:0;border-radius:0;margin-top:calc(-1 * var(--crop-top))}
 .screen-dialog>.screen-crop{clear:both}.context-photo{max-width:420px;margin:32px auto 40px}.context-photo img{display:block;width:100%;height:auto}.context-photo figcaption{font-size:11px;line-height:1.6;color:var(--muted);margin-top:10px}
+/* Approved C monogram: curved P, a distinct I and a terminal dot. */
+.insights-mark{width:32px;height:26px;flex-shrink:0}@media(max-width:740px){.insights-mark{width:28px;height:22px}}
