@@ -20,10 +20,11 @@ const screenLinks = [...document.querySelectorAll('[data-screen]')];
 if (screenLinks.length && typeof HTMLDialogElement !== 'undefined') {
   const dialog = document.createElement('dialog');
   dialog.className = 'screen-dialog';
-  dialog.setAttribute('aria-label', 'Full-size interface');
+  const chinese = document.documentElement.lang === 'zh-CN';
+  dialog.setAttribute('aria-label', chinese ? '完整界面' : 'Full-size interface');
   const close = document.createElement('button');
   close.type = 'button';
-  close.textContent = 'Close ×';
+  close.textContent = chinese ? '关闭 ×' : 'Close ×';
   const fullImage = document.createElement('img');
   dialog.append(close, fullImage);
   document.body.append(dialog);
@@ -43,3 +44,8 @@ if (screenLinks.length && typeof HTMLDialogElement !== 'undefined') {
     }
   });
 }
+
+// Corresponding headings share IDs, so a language switch can retain the section.
+document.querySelectorAll('.language-link').forEach(link => {
+  if (location.hash) link.hash = location.hash;
+});
