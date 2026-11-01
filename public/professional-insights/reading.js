@@ -26,13 +26,17 @@ if (screenLinks.length && typeof HTMLDialogElement !== 'undefined') {
   close.type = 'button';
   close.textContent = chinese ? '关闭 ×' : 'Close ×';
   const fullImage = document.createElement('img');
-  dialog.append(close, fullImage);
+  const imageViewport = document.createElement('div');
+  imageViewport.append(fullImage);
+  dialog.append(close, imageViewport);
   document.body.append(dialog);
   screenLinks.forEach(link => link.addEventListener('click', event => {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     fullImage.src = link.href;
     fullImage.alt = link.querySelector('img').alt;
+    imageViewport.className = link.dataset.cropTop ? 'screen-crop' : '';
+    imageViewport.style.setProperty('--crop-top', `${link.dataset.cropTop || 0}%`);
     dialog.showModal();
     dialog.scrollTop = 0;
   }));
