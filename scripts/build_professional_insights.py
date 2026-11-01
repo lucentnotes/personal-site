@@ -27,7 +27,7 @@ def inline(value):
     value = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', value)
     return re.sub(r'(?<!\*)\*([^*]+)\*(?!\*)', r'<em>\1</em>', value)
 
-def render_body(blocks):
+def render_body(blocks, inserts=None):
     output, toc, used = [], [], set()
     for block in blocks:
         match = re.match(r'^(#{2,3}) (.+)$', block)
@@ -42,7 +42,22 @@ def render_body(blocks):
             toc.append(f'<a class="level-{level}" href="#{ident}">{escape(title)}</a>')
         else:
             output.append('<p>' + inline(block.replace('\n', ' ')) + '</p>')
+        if inserts and block in inserts:
+            output.append(inserts[block])
     return '\n'.join(output), '\n'.join(toc)
+
+def article_media(index):
+    if index == 0:
+        screens = []
+        for filename, title, width, height in [
+            ('scenario.webp', 'Scenario simulation', 1206, 2484),
+            ('digital-human.webp', 'Digital human · Teacher Ale', 1206, 2486),
+        ]:
+            screens.append(f'<figure class="ui-screen"><a href="../media/{filename}" data-screen aria-label="Enlarge {title}"><img src="../media/{filename}" alt="{title} mini-program interface" width="{width}" height="{height}" loading="lazy" decoding="async"></a><figcaption>{title}</figcaption></figure>')
+        return {'Three experiences helped me examine that gap: a parenting simulation, an AI digital human, and a companion toy for children.': '<div class="ui-pair">' + ''.join(screens) + '</div>'}
+    if index == 2:
+        return {'The experience combined animated educational content, parental goal-setting, scheduled reminders, NFC cards, and question-based interactions. This provided a more specific context for the product than open-ended conversation alone.': '<figure class="product-animation"><video controls playsinline preload="none" poster="../media/animation-poster.webp" width="1024" height="576" aria-label="Product animation: brushing teeth"><source src="../media/theme-animation.mp4" type="video/mp4"><a href="../media/theme-animation.mp4">Watch the animation</a></video><figcaption>Product animation · Brushing teeth</figcaption></figure>'}
+    return {}
 
 MARK = '<svg class="insights-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 27V5h12v42M18 5h11v11H18v11h11"/><circle cx="9" cy="11" r="1.5" fill="currentColor" stroke="none"/></svg>'
 ICONS = ['<svg class="theme-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M7 28h12l10-16h12M19 28l10 16h12"/><circle cx="7" cy="28" r="4"/><circle cx="43" cy="12" r="4"/><circle cx="43" cy="44" r="4"/></svg>', '<svg class="theme-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="21" cy="28" r="15"/><circle cx="35" cy="28" r="15"/><path d="M28 16v44"/></svg>', '<svg class="theme-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M8 10h40v49H25L13 48v-9H8z"/><path d="M28 17v15M21 24h14"/></svg>', '<svg class="theme-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M7 28l21-21 21 21-21 21z"/><path d="M18 28h20m-7-7 7 7-7 7"/></svg>']
@@ -56,7 +71,7 @@ def shell(title, inner, detail=False, slug='', description=''):
 <meta name="description" content="{escape(description, quote=True)}">
 <link rel="canonical" href="{BASE + (slug + '/' if slug else '')}">
 <link rel="icon" href="{prefix}mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="{prefix}style.css?v=insights4"><script src="{prefix}reading.js?v=insights4" defer></script></head>
+<link rel="stylesheet" href="{prefix}style.css?v=insights5"><script src="{prefix}reading.js?v=insights5" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a><div class="site"><header class="top"><a class="brand" href="{prefix}">{MARK}Professional Insights</a></header>
 {inner}</div></body></html>'''
 
@@ -74,7 +89,7 @@ def build():
         3: ('toy-store.jpg', 'Xiaole display in a toy store', '')
     }
     for i, item in enumerate(data):
-        body, toc = render_body(item['blocks'])
+        body, toc = render_body(item['blocks'], article_media(i))
         photo = ''
         if i in photo_info:
             filename, alt, caption = photo_info[i]

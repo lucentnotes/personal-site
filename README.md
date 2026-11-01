@@ -23,4 +23,6 @@ npm run preview:site
 
 家长期待篇的场景图为用户指定的 AI 插图，页面保留标注。展会及玩具店图片为用户提供的实拍。未使用其他 AI 模拟实景图。
 
+第一篇仅补充场景模拟与数字人阿乐老师两张实际界面，完整展示并支持放大。第三篇的习惯养成助手段落附产品刷牙动画，点击播放，不自动播放或预加载视频。相关素材在 `public/professional-insights/media/`。
+
 历史 React/Vite 页面和旧工作 Log 保留在源码中，不属于当前正式发布内容。不要用旧 `npm run build` 的产物覆盖正式站点。详见 [发布说明](docs/production-site.md)。
