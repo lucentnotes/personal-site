@@ -48,7 +48,8 @@ def render_body(blocks, inserts=None):
 
 def interface_figure(filename, title, width, height, single=False):
     classes = 'ui-screen ui-single' if single else 'ui-screen'
-    return f'<figure class="{classes}"><a href="../media/{filename}" data-screen aria-label="Enlarge {title}"><img src="../media/{filename}" alt="{title} mini-program interface" width="{width}" height="{height}" loading="lazy" decoding="async"></a><figcaption>{title}</figcaption></figure>'
+    ident = filename.removesuffix(".webp")
+    return f'<figure id="{ident}" class="{classes}"><a href="../media/{filename}" data-screen aria-label="Enlarge {title}"><img src="../media/{filename}" alt="{title} mini-program interface" width="{width}" height="{height}" loading="lazy" decoding="async"></a><figcaption>{title}</figcaption></figure>'
 
 def article_media(index):
     if index == 0:
