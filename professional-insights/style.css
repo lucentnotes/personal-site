@@ -12,3 +12,6 @@ html[lang=zh-CN] h1,html[lang=zh-CN] .entry h2{text-wrap:balance}
 .screen-dialog>.screen-crop{clear:both}.context-photo{max-width:420px;margin:32px auto 40px}.context-photo img{display:block;width:100%;height:auto}.context-photo figcaption{font-size:11px;line-height:1.6;color:var(--muted);margin-top:10px}
 /* Approved C monogram: curved P, a distinct I and a terminal dot. */
 .insights-mark{width:32px;height:26px;flex-shrink:0}@media(max-width:740px){.insights-mark{width:28px;height:22px}}
+@font-face{font-family:"Insights Manrope";src:url("./fonts/manrope.woff") format("woff");font-style:normal;font-weight:200 800;font-display:swap}
+/* Match the approved C lockup: monogram, fine divider, light two-line name. */
+.brand{gap:0;font-weight:400;letter-spacing:0;text-transform:none}.brand .insights-mark{width:64px;height:48px}.brand-divider{display:block;width:1px;height:44px;margin:0 14px;background:var(--green);opacity:.55;flex-shrink:0}.brand-wordmark{display:grid;font-family:"Insights Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:21px;font-weight:400;line-height:1.15;letter-spacing:0}.brand-wordmark>span{display:block}@media(max-width:740px){.brand .insights-mark{width:48px;height:36px}.brand-divider{height:34px;margin:0 10px}.brand-wordmark{font-size:16px}}
