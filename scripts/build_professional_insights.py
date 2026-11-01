@@ -15,7 +15,7 @@ BASE = 'https://suojin311-creator.github.io/eportfolio/professional-insights/'
 def release_version():
     """Change document URLs when copy, layout, or navigation changes."""
     digest = sha256()
-    for path in [Path(__file__), CONTENT / 'Professional-Insights-Final.md', CONTENT / 'Professional-Insights-zh.md', CONTENT / 'cards.json', PAGES / 'style.css', PAGES / 'reading.js']:
+    for path in [Path(__file__), CONTENT / 'Professional-Insights-Final.md', CONTENT / 'Professional-Insights-zh.md', CONTENT / 'cards.json', PAGES / 'style.css', PAGES / 'reading.js', PAGES / 'mark.svg']:
         digest.update(path.read_bytes())
     return digest.hexdigest()[:12]
 
@@ -93,7 +93,7 @@ def article_media(index):
             'Continued usage: Whether users continue to engage with the product after the initial purchase.': interface_figure('points-shop.webp', 'Points shop · Interface reference', 1206, 2475, single=True)}
     return {}
 
-MARK = '<svg class="insights-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 27V5h12v42M18 5h11v11H18v11h11"/><circle cx="9" cy="11" r="1.5" fill="currentColor" stroke="none"/></svg>'
+MARK = (PAGES / 'mark.svg').read_text().strip().replace('stroke="#287845"', 'stroke="currentColor"').replace('fill="#287845"', 'fill="currentColor"')
 ICONS = ['<svg class="theme-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M7 28h12l10-16h12M19 28l10 16h12"/><circle cx="7" cy="28" r="4"/><circle cx="43" cy="12" r="4"/><circle cx="43" cy="44" r="4"/></svg>', '<svg class="theme-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="21" cy="28" r="15"/><circle cx="35" cy="28" r="15"/><path d="M28 16v44"/></svg>', '<svg class="theme-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M8 10h40v49H25L13 48v-9H8z"/><path d="M28 17v15M21 24h14"/></svg>', '<svg class="theme-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M7 28l21-21 21 21-21 21z"/><path d="M18 28h20m-7-7 7 7-7 7"/></svg>']
 ARROW = '<span aria-label="Read essay"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor"><path d="M4 14 14 4M4 4h10v10"/></svg></span>'
 
@@ -167,7 +167,7 @@ def shell(title, inner, detail=False, slug='', description='', lang='en'):
 <link rel="alternate" hreflang="en" href="{BASE + language_path('en', slug)}">
 <link rel="alternate" hreflang="zh-CN" href="{BASE + language_path('zh', slug)}">
 <link rel="alternate" hreflang="x-default" href="{BASE + language_path('en', slug)}">
-<link rel="icon" href="{prefix}mark.svg" type="image/svg+xml">
+<link rel="icon" href="{versioned(prefix + 'mark.svg')}" type="image/svg+xml">
 <link rel="stylesheet" href="{versioned(prefix + 'style.css')}"><script src="{versioned(prefix + 'reading.js')}" defer></script></head>
 <body><a class="skip" href="#main">{ui['skip']}</a><div class="site"><header class="top"><a class="brand" href="{versioned(list_path)}">{MARK}{ui['brand']}</a>{language_nav}</header>
 {inner}</div></body></html>'''
