@@ -74,13 +74,13 @@ def article_media(index):
             screens.append(interface_figure(filename, title, width, height))
         return {'Three experiences helped me examine that gap: a parenting simulation, an AI digital human, and a companion toy for children.': '<div class="ui-pair">' + ''.join(screens) + '</div>'}
     if index == 1:
-        return {'I would also consider the work the product introduces. Selecting content, configuring goals, interpreting reports, and deciding what to do next can require parental effort. Those activities may be worthwhile, but they belong in any assessment of a promise to reduce supervision.': interface_figure('growth-home.webp', 'Growth Centre · Parent dashboard', 1206, 2483, single=True)}
+        return {'First, products should identify which educational responsibilities parents actually want to delegate. Routine practice, progress tracking, reminders, and basic feedback may be suitable areas for technological support. However, these functions should not be assumed to replace every form of parental guidance. A product that generates progress reports, for example, should help parents understand what the information means and what they can do with it, rather than merely adding another monitoring task.': interface_figure('growth-home.webp', 'Growth Centre · Parent dashboard', 1206, 2483, single=True)}
     if index == 2:
         return {
-            'The team later explored positioning the toy as a habit-building assistant for children aged three to six.': '<div class="ui-pair">' + interface_figure('growth-library.webp', 'Animation library', 1206, 2458) + interface_figure('growth-detail.webp', 'Animation series · Detail', 1206, 2467) + '</div>',
-            'The experience combined animated educational content, parental goal-setting, scheduled reminders, NFC cards, and question-based interactions. This provided a more specific context for the product than open-ended conversation alone.': '<figure class="product-animation"><video controls playsinline preload="none" poster="../media/animation-poster.webp" width="1024" height="576" aria-label="Product animation: brushing teeth"><source src="../media/theme-animation.mp4" type="video/mp4"><a href="../media/theme-animation.mp4">Watch the animation</a></video><figcaption>Product animation · Brushing teeth</figcaption></figure>'}
+            "The team introduced a habit-building package that connected the parent-facing mini-program with the child's interaction with the toy.": '<div class="ui-pair">' + interface_figure('growth-library.webp', 'Animation library', 1206, 2458) + interface_figure('growth-detail.webp', 'Animation series · Detail', 1206, 2467) + '</div>',
+            'Parents could access a growth-goal section in the mini-program. Children first watched short animations created by the team, covering habits and everyday safety topics such as brushing teeth and looking at traffic lights before crossing the road. After an animation, the system generated a corresponding growth goal for the parent to review and confirm.': '<figure class="product-animation"><video controls playsinline preload="none" poster="../media/animation-poster.webp" width="1024" height="576" aria-label="Product animation: brushing teeth"><source src="../media/theme-animation.mp4" type="video/mp4"><a href="../media/theme-animation.mp4">Watch the animation</a></video><figcaption>Product animation · Brushing teeth</figcaption></figure>'}
     if index == 3:
-        return {'This was also where commercial communication and product design met. The way a capability was presented helped define the standard against which the family would judge it.': interface_figure('shop.webp', 'Mini-program shop · Interface reference', 1206, 2461, single=True)}
+        return {'However, once a product reaches an acceptable level of quality and can reliably fulfil its main purpose, the factors influencing further growth may change. Sales, marketing, distribution channels, and operational execution can become increasingly important.': interface_figure('shop.webp', 'Mini-program shop · Interface reference', 1206, 2461, single=True)}
     return {}
 
 MARK = '<svg class="insights-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 27V5h12v42M18 5h11v11H18v11h11"/><circle cx="9" cy="11" r="1.5" fill="currentColor" stroke="none"/></svg>'
@@ -174,6 +174,7 @@ def build():
         }
         for i, item in enumerate(data):
             media = translated_media(i, lang, source[i]['blocks'], item['blocks'])
+            assert set(media).issubset(item['blocks']), 'Every media placement must match a current paragraph'
             body, toc = render_body(item['blocks'], media, source[i]['blocks'])
             prefix = asset_prefix(lang, True)
             photo = ''

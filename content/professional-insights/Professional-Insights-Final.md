@@ -3,15 +3,14 @@
 Final edited collection
 
 1. Beyond Product Features: Understanding Real-world Adoption
-2. The Role Parents Expect Educational Products to Play
-3. Beyond AI Capabilities: Defining a Clearer Product Experience
-4. From Purchase Appeal to Educational Value
+2. Understanding Parents’ Actual Needs: Selective Parental Engagement
+3. Beyond AI Capabilities: Designing for the Right Product Experience
+4. Commercial Success vs. Educational Value
 
 
 ---
 
 ## Article 1
-
 # Beyond Product Features: Understanding Real-world Adoption
 
 *Why a well-designed feature does not necessarily become a meaningful part of users' lives.*
@@ -84,247 +83,215 @@ My work did not establish improvements in retention or learning outcomes. It gav
 
 ## Article 2
 
-# The Role Parents Expect Educational Products to Play
+# Understanding Parents’ Actual Needs: Selective Parental Engagement
 
-*Understanding learning needs through supervision, independence, and shared participation.*
+*Why parents may want to remain involved in their children’s growth while outsourcing parts of the educational process.*
 
-## Beyond Better Learning Outcomes
+## Rethinking Parental Involvement
 
-While working in an early-stage EdTech company, I encountered parents through user conversations, product activities, and feedback from frontline sales staff. Many wanted products that would support their children’s learning. Yet that shared goal did not mean they expected the same kind of support.
+When designing educational products for families, it is easy to assume that parents either want to be actively involved in their children’s learning or prefer to delegate educational responsibilities to others. However, my experience working with parents in an EdTech company suggested that their expectations were more nuanced.
 
-Some wanted help supervising homework. Others hoped a learning device would allow their child to study more independently. Another parent described an ideal product as something she and her child could use to learn and grow together.
+Some parents wanted products that could reduce the time and effort they spent supervising their children’s learning. Others wanted technology to help them understand their children’s progress without having to manage every learning activity themselves. At the same time, parents could still value shared activities, emotional connection, and opportunities to grow together with their children.
 
-These expectations concerned more than educational content. They reflected different ideas about the role a product should play in family life, including which responsibilities it would assume and how parents would participate.
+These expectations are not necessarily contradictory. Rather, they suggest that parental involvement is selective. Parents may want to delegate certain responsibilities while retaining the aspects of parenting they find meaningful.
 
-The encounters were informal rather than a representative study. Their value for me lay in revealing distinctions that a broad request such as “help my child learn” could conceal.
+This distinction matters because parental involvement is not simply a matter of willingness. It is also shaped by the time, energy, and resources available to each family. Parents must make choices about where to invest their efforts and which responsibilities they can realistically share with others or delegate to technology.
 
-## A Companion Toy Expected to Manage Learning
+## What Parents Want to Delegate
 
-One father’s expectations of an AI companion toy made this particularly clear. He wanted the toy to tutor his child, supervise learning, and provide feedback, while he reviewed progress reports.
+One recurring expectation I encountered was the desire to reduce the burden of daily educational supervision.
 
-His expectation extended well beyond answering questions. It combined several responsibilities: providing explanations, keeping learning on track, and making progress visible to him. He would remain informed while the product handled much of the ongoing activity.
+For example, some parents preferred to have tutors or other forms of support take responsibility for homework supervision. They were not necessarily uninterested in their children’s education. Rather, they wanted to avoid spending a large amount of time managing tasks that could be handled by someone else.
 
-The distinction mattered because conversation, educational content, and reporting could all appear on a feature list without collectively meeting that expectation. A toy might answer questions and summarise interactions while still requiring a parent to initiate practice, redirect attention, or help the child continue.
+One mother I spoke with expressed this trade-off particularly clearly. She suggested that, given her circumstances, spending more time earning money might be more practical than spending that time helping her child improve academically. This was an individual perspective, not a general attitude shared by all parents. Nevertheless, it highlighted an important consideration: parental involvement competes with other responsibilities, and families may have different priorities depending on their circumstances.
 
-A progress report could provide visibility into what the product recorded. It would not, by itself, establish that the product had supervised learning effectively.
+A similar expectation appeared in conversations about AI-powered educational products. A father of a ten-year-old boy, for example, expressed interest in having a robot help supervise his child’s learning, provide feedback, and identify areas for improvement. He imagined being able to review the robot’s reports to understand how his child was progressing, what difficulties he might be experiencing, and what could be done next.
 
-This helped me identify a more precise product question: which parts of the responsibility the parent wanted to delegate could the system reliably fulfil?
+In this scenario, the parent would not need to be physically present throughout the learning process. Instead, technology could take on some routine responsibilities while allowing the parent to remain informed and make decisions when necessary.
 
-## Supporting the Process of Learning
+Learning devices presented another version of this expectation. Some parents hoped that purchasing a learning machine would encourage their children to study independently, reducing the need for constant parental supervision. However, providing a device does not automatically create independent learning habits. From my observations, children who were not particularly motivated to study might simply ignore the device or use it for purposes other than learning.
 
-Other conversations reinforced the distinction between providing resources and supporting their use.
+This reveals an important distinction: parents may hope to transfer some educational responsibilities to technology, but the product still needs to support the child’s motivation and ability to use it independently.
 
-Some parents wanted a family tutor to take responsibility for homework supervision. Explaining difficult material would address one part of that request. Managing homework could also involve getting the child to begin, maintaining attention, responding to resistance, and checking completion.
+## What Parents Want to Keep
 
-Similarly, some parents hoped that purchasing a learning device would help their children study independently. Access to content could support that goal, but independence also depended on what happened when a child needed to choose an activity, encountered difficulty, or lost interest.
+Although some parents wanted to delegate routine educational tasks, this did not mean they wanted technology to replace their involvement entirely.
 
-These observations changed how I interpreted requests for educational support. A team could respond by adding explanations, exercises, or a larger content library while leaving the parent’s main difficulty unresolved. If the difficulty concerned organising daily learning, the product would need to be assessed against that process as well as the resources it offered.
+In some conversations, parents expressed a preference for products that could help them learn and grow alongside their children. One mother, for example, described an ideal product as something that would allow parents and children to learn together while strengthening their relationship.
 
-I could not assume that every parent seeking a tutor or device had the same underlying need. The point was to investigate what support meant in each situation before translating it into requirements.
+This expectation is different from simply asking a product to deliver better academic results. It places value on the experience of learning together.
 
-## Shared Learning as a Different Expectation
+Interestingly, this does not necessarily conflict with the desire to outsource homework supervision or other demanding responsibilities. A parent may be willing to delegate repetitive or stressful tasks while still wanting to participate in enjoyable activities, conversations, and shared discoveries.
 
-Another mother described her ideal product as something parents and children could use together to learn and grow.
+The distinction may lie in the nature of the activity itself. Parents might see homework supervision as a responsibility that requires time, patience, and considerable effort, whereas playing, exploring, or discussing something together can be a more rewarding form of interaction.
 
-Her account brought a different form of value into view. The product would help make her participation meaningful, rather than primarily reduce the need for it.
+From this perspective, the question is not whether parents want to be involved, but what kind of involvement they want to maintain. Technology could reduce the burden of repetitive tasks while leaving more room for encouragement, communication, and shared experiences.
 
-That expectation implied a different experience. A product designed for independent use might offer few opportunities for a parent to contribute. A shared activity would need to give both participants a worthwhile role.
+## Designing Around Selective Parental Engagement
 
-The contrast also made broad labels such as “involved parent” less useful to me. Wanting to delegate homework supervision did not establish that someone wanted less involvement in reading, play, or conversation. Wanting shared learning did not establish that a parent could participate in every session.
+These observations suggest that family-oriented educational products should be designed around the different roles and expectations within a family, rather than treating parental involvement as something that can simply be increased or replaced.
 
-I began to understand parental engagement in relation to particular activities and circumstances. A parent might seek help with demanding routines while wanting to preserve enjoyable interactions. This was a possibility to explore, rather than a motive to assign without further discussion.
+First, products should identify which educational responsibilities parents actually want to delegate. Routine practice, progress tracking, reminders, and basic feedback may be suitable areas for technological support. However, these functions should not be assumed to replace every form of parental guidance. A product that generates progress reports, for example, should help parents understand what the information means and what they can do with it, rather than merely adding another monitoring task.
 
-## Understanding the Work Behind the Request
+Second, products should preserve opportunities for meaningful parent-child interaction. Rather than attempting to remove parents from the learning process, technology could reduce repetitive tasks and create more room for encouragement, discussion, and shared exploration.
 
-Requests to delegate educational tasks should not automatically be interpreted as a lack of commitment. They indicate where parents are seeking support; they do not explain, on their own, why that support is needed.
+Finally, products need to consider the child’s ability and willingness to participate independently. Parents may hope that technology will reduce their supervision responsibilities, but this outcome depends on whether children find the product understandable, engaging, and useful. A product cannot achieve independent learning simply by transferring activities from parents to children.
 
-Working hours, caregiving responsibilities, available resources, and the demands of a particular activity could all affect what a family could sustain.
+Ultimately, parental involvement should not be understood as an all-or-nothing decision. Parents may want to step back from certain responsibilities without stepping away from their children’s development. Their expectations are shaped by the practical demands of family life as well as the emotional value they attach to different forms of interaction.
 
-In future user conversations, I would therefore look beyond desired outcomes to how an activity currently happens: who initiates it, where difficulties arise, when an adult intervenes, and which responsibilities the parent wants to retain or hand over.
-
-This would help distinguish requests that initially sound similar. A parent seeking explanations, a parent seeking supervision, and a parent seeking shared learning might all ask for an educational product while expecting substantially different experiences.
-
-## Making the Product’s Role Explicit
-
-The design implication I drew was to make the division of responsibility explicit.
-
-For a learning assistant, I would distinguish answering questions from initiating practice, supporting persistence, checking completion, and informing the parent. Capability in one area should not imply capability across the others.
-
-I would also consider the work the product introduces. Selecting content, configuring goals, interpreting reports, and deciding what to do next can require parental effort. Those activities may be worthwhile, but they belong in any assessment of a promise to reduce supervision.
-
-For shared learning, the focus would differ: what each participant contributes, how they interact, and whether the activity fits the time available. A parent dashboard alone would not create a shared learning experience.
-
-These are implications for future design work, rather than improvements I implemented and evaluated in that role.
-
-The broader lesson was to consider educational outcomes alongside the arrangement through which a family hopes to achieve them. Understanding what a child should learn is essential. Understanding what parents expect the product and themselves to do makes that goal concrete enough to guide product decisions.
+The challenge for EdTech product design is not simply to replace parental involvement with technology, but to understand how educational responsibilities can be distributed in ways that respect families’ constraints while supporting children’s learning and meaningful family relationships.
 
 ---
 
 ## Article 3
 
-# Beyond AI Capabilities: Defining a Clearer Product Experience
+# Beyond AI Capabilities: Designing for the Right Product Experience
 
-*How a more specific purpose can guide the design of an AI companion toy.*
+*Why successful AI products need more than advanced technology.*
 
-## From Capabilities to Purpose
+## The Gap Between AI Expectations and Product Reality
 
-Working with an AI companion toy for children changed how I thought about the relationship between technology and product design.
+When developing AI-powered products, it is tempting to focus on improving the intelligence of the underlying technology. A more capable model may seem like the most direct way to create a better user experience. However, my experience working with an AI companion toy made me realise that product quality depends on more than the intelligence of the AI itself.
 
-Conversational AI offered many possibilities: answering questions, telling stories, and responding to a child’s interests. Yet these capabilities did not establish what the toy was primarily for, which interactions it needed to perform reliably, or how it would fit into everyday life.
+The product was initially positioned as an AI companion for children, with conversational interaction at its centre. However, this broad positioning created expectations that were difficult for the actual product to fulfil. Marketing messages sometimes presented capabilities beyond what the product could reliably deliver. When distributors received the product, some found that the actual experience did not match what they had expected. This contributed to dissatisfaction and the loss of some distributors.
 
-Describing a product as a companion, tutor, or learning assistant also created different expectations. The same conversational interface could sit behind each description, while the responsibilities implied by those descriptions varied considerably.
+Looking back, the issue was not simply that the AI needed to become smarter. The product's positioning, promised experience, and technical capabilities were not sufficiently aligned.
 
-I began to see product positioning as a design decision with practical consequences. A clearer purpose could guide which capabilities mattered, how interactions should unfold, and what the complete system needed to support.
+This experience highlighted an important distinction: an AI product should not be designed around what the technology might theoretically achieve, but around the experience it can consistently deliver in real usage scenarios.
 
-## Understanding the Constraints Behind Conversation
+## Rethinking the Interaction Model
 
-Through working with the product and discussing problems with colleagues, I learned that an unsatisfactory conversation could involve microphone input, network connectivity, hardware performance, model selection, response speed, or prompt configuration.
+An AI companion toy may appear to be a straightforward product: a child speaks to a toy, and the toy responds. Yet delivering this experience reliably involves multiple technical components.
 
-I was not responsible for hardware engineering. Nevertheless, this exposure helped me recognise why a problem that appeared to concern the AI could require attention elsewhere in the system.
+During my work, I became aware of how issues involving hardware heat, microphone quality, Wi-Fi connectivity, model selection, and response speed could all affect the interaction. When a toy failed to respond, the cause was not necessarily the AI model. It could be a problem with sound collection, network connectivity, or another part of the system.
 
-It also affected how I thought about expanding the product’s capabilities. A more advanced model might improve some responses, while leaving other sources of friction unresolved. Each additional conversational use case still depended on the supporting system working well enough in its intended setting.
+This made me realise that conversational intelligence alone does not determine whether an AI product feels reliable. A conversational product is only as reliable as the system supporting the conversation.
 
-This made the definition of that setting more important. A broad conversational promise left many possible interactions to accommodate. A more specific purpose could help the team identify which interactions deserved priority and what dependable performance would mean.
+I also observed different approaches to designing AI companion products in the market.
 
-## Considering Different Forms of Companionship
+One approach was to build toys around recognisable characters, such as Ultraman. By giving the toy a specific identity, knowledge base, and conversational boundaries, the product could create a more focused interaction. Instead of expecting it to behave like a general-purpose conversational assistant, users would have a clearer idea of what kind of interaction to expect.
 
-My observations of other companion products also prompted me to reconsider how much of the experience needed to depend on conversation.
+Another approach was to limit the complexity of verbal interaction. In the case of Ropet, its CEO insisted that the product should not engage in conversations using complex sentences. This established a clear boundary for the product's verbal interactions. Rather than describing the product simply in terms of limited conversational capability, it is more accurate to recognise that complex, sentence-based conversation was not part of the interaction the CEO wanted the product to offer. Combined with touch responses and pet-like interactions, this approach placed less emphasis on sophisticated conversation and more on creating a simple sense of companionship.
 
-Some products used a recognisable character to give interactions a clearer context. Others placed greater emphasis on physical interaction and expressive behaviour, with less reliance on complex verbal exchanges.
+These examples represent different product strategies rather than a universal formula. However, they illustrate an important possibility: when current AI capabilities cannot fulfil every expectation, designers can reconsider the interaction model itself. A product does not always need to simulate human conversation. It may create value through a narrower conversational role, simple responsive interactions, or a combination of physical and digital experiences.
 
-I did not have comparative evidence showing which approach was more effective. These observations were useful as design references: they suggested that character, physical form, and predictable responses could all contribute to a companion experience.
+In this sense, defining what an AI product should not do can be just as important as deciding what it should do.
 
-They encouraged me to examine the role of conversation within our product, rather than assuming that broader conversational ability should always be the next development goal.
+## From General AI Companion to a Specific Educational Purpose
 
-## Exploring a Habit-Building Assistant
+A more concrete example of this thinking emerged when the team reconsidered the positioning of our own toy, named Xiaole.
 
-The team later explored positioning the toy as a habit-building assistant for children aged three to six.
+Rather than continuing to position it broadly as an AI companion, the team shifted towards a more specific purpose: a habit-building assistant for children aged three to six.
 
-The experience combined animated educational content, parental goal-setting, scheduled reminders, NFC cards, and question-based interactions. This provided a more specific context for the product than open-ended conversation alone.
+This change reflected a closer alignment between the product's actual conversational capabilities and the needs of a more clearly defined age group. At that stage, its conversational abilities were more suitable for younger children than for complex, open-ended conversations. Habit formation also provided a more concrete educational context in which the product could be used.
 
-The significance was not simply that the toy had acquired more features. The proposed purpose offered a basis for deciding how those features should work together.
+The team introduced a habit-building package that connected the parent-facing mini-program with the child's interaction with the toy.
 
-Parental goal-setting could be considered in relation to the routine being supported. Reminders could be assessed in relation to when support was needed. Content and card-triggered interactions could be designed around what the child would encounter at particular moments.
+Parents could access a growth-goal section in the mini-program. Children first watched short animations created by the team, covering habits and everyday safety topics such as brushing teeth and looking at traffic lights before crossing the road. After an animation, the system generated a corresponding growth goal for the parent to review and confirm.
 
-These connections still required design and testing. Their value was that the team now had a more concrete experience to examine, rather than a collection of conversational possibilities.
+Parents could then configure reminders, including the time and frequency. When the scheduled time arrived, the toy would remind the child about the target habit.
 
-I left the company before observing the longer-term results. I cannot claim that this direction improved sales, retention, or children’s habits. What I took from it was a change in how the product could be defined and developed.
+The experience also included NFC cards. Each card corresponded to an animation topic and contained around ten guiding questions. For example, a card about brushing teeth might include questions about why brushing is important. When a child tapped the card against the NFC area on the toy's body, the toy would randomly select a question and interact with the child. This helped avoid repeating exactly the same question every time.
 
-## Turning a Positioning Decision Into an Interaction
+The different components served distinct purposes. The animations introduced habits in an engaging format, the parent-facing mini-program allowed adults to set and manage goals, and the NFC cards gave children a way to initiate interactions independently, even when their parents were not present.
 
-A habit-building purpose would need to influence more than the product description.
+The product therefore involved three connected roles. Parents selected and managed growth goals, children engaged with the content and initiated activities, and the toy provided reminders and guided interactions around specific habits.
 
-It would require decisions about how a routine begins, what prompts the child to act, how the toy responds, and when parental support is needed. It would also require clarity about the contribution of each component.
+Rather than relying entirely on open-ended AI conversation, the product used a more structured interaction model. Its educational purpose was clearer, and the activities were connected to specific everyday behaviours.
 
-An NFC card could provide a concrete way to initiate an interaction. A scheduled reminder could establish a recurring prompt. AI-generated responses could offer flexibility within selected exchanges. Each would need to serve the routine rather than merely demonstrate a separate capability.
+This repositioning represented an attempt to move from a broad promise of AI companionship towards a more defined educational use case. It also changed how the product experience was organised: instead of expecting the toy to serve as an unrestricted conversational companion, the team designed a more structured experience around habit formation.
 
-This helped me understand the relationship between structure and AI. Predictable steps could give the experience continuity, while conversational flexibility could be used where it added value.
+However, a clearer positioning did not automatically guarantee commercial success. From my impression at the time, the product did not achieve particularly strong sales. Since I had left the company, I could not observe its longer-term performance or determine the reasons behind this outcome. Earlier distributor dissatisfaction, product experience, and other market or channel factors may all have played a role, but I cannot establish a direct causal relationship.
 
-The relevant design task would be to decide where each approach belonged. An interaction did not need to be open-ended at every stage to benefit from AI.
+The important point is that repositioning a product is only a starting point. The revised experience still needs to be validated through actual use and market feedback.
 
-## A Clearer Purpose Creates Testable Questions
+## Designing Around the Experience, Not Just the Technology
 
-A more specific use case also makes evaluation more concrete.
+These experiences changed how I think about AI product design.
 
-For the habit-building direction, I would first examine whether children could understand how to begin, whether the sequence worked reliably, and where adult intervention was required. These observations could reveal problems in the proposed experience before making claims about lasting behavioural change.
+First, product positioning should reflect what the technology can reliably deliver. Broad claims about AI companionship or intelligence may create expectations that are difficult to meet. A more specific use case can help users understand the product's purpose and what they can reasonably expect from it.
 
-The distinction between system activity and user outcomes would remain essential. Delivering a reminder would demonstrate that a prompt was sent, not that a child acted on it. Completing an interaction would not establish that a habit had formed.
+Second, the interaction model should be designed around the target users and context. Complex conversation is only one possible form of interaction. For younger children, structured prompts, physical interactions, reminders, and simple responses may be more appropriate than unrestricted conversation.
 
-A focused product therefore would not automatically be an effective one. It would offer a clearer proposition to investigate, with more specific assumptions that could be examined.
+Third, the entire system needs to support the promised experience. Hardware, connectivity, interaction design, and AI capabilities are interdependent. Improving one component cannot necessarily compensate for weaknesses in another.
 
-These are considerations I would bring to future product work, rather than an evaluation I conducted in that role.
+Ultimately, the goal should not be to make every AI product as intelligent as possible. It should be to identify an experience that is valuable to its intended users and can be delivered consistently with the available technology.
 
-## Designing Around a Promise the Product Can Support
-
-The companion toy helped me see that progress in an AI product can involve reconsidering its purpose and interaction design alongside improving its technical capabilities.
-
-A broad promise can make many features appear relevant. A specific purpose requires choices: which situations to support, which interactions to prioritise, and what to do when the system cannot respond as expected.
-
-Those choices connect positioning to implementation. Calling a toy a habit-building assistant creates a responsibility to organise the experience around routines and to assess whether that support works. The label alone cannot establish the value.
-
-My main learning was to treat AI as one component of a deliberately designed experience. Its contribution becomes clearer when the product has a defined user, situation, and purpose, supported by interactions the complete system can reliably deliver.
+A well-designed AI product is not necessarily the one with the most advanced AI. It is the one that makes the best use of its capabilities to deliver a clear, reliable, and meaningful experience.
 
 ---
 
 ## Article 4
 
-# From Purchase Appeal to Educational Value
+# Commercial Success vs. Educational Value
 
-*Understanding what commercial signals reveal about an EdTech product, and what remains to be examined.*
+*Why a product that sells well is not necessarily a product that delivers meaningful educational outcomes.*
 
-## Learning to Interpret Commercial Feedback
+## When Commercial Success Is Mistaken for Educational Value
 
-Working across product operations, user interactions, sales feedback, and marketing activities in an early-stage EdTech company exposed me to different ways of judging a product.
+In the EdTech industry, commercial success can easily be mistaken for evidence of product quality. A product that sells well may appear to have successfully addressed users' needs. However, my experience gradually made me realise that commercial performance and educational value are not the same thing.
 
-A demonstration could attract attention. A child could express a strong preference. A parent could recognise a potential benefit and consider the price acceptable. These responses mattered to a business trying to establish a market.
+For example, some learning devices from well-established brands achieve strong sales. Their market performance may indicate that parents recognise their appeal or consider them worth purchasing. However, sales figures alone cannot tell us whether children have learned more effectively through using them.
 
-They also needed careful interpretation. Interest, purchase, continued use, and educational improvement represented different stages of a product’s relationship with a family. Evidence from one stage could inform decisions without establishing what happened at the others.
+An educational product can be commercially attractive because of its brand, features, presentation, convenience, or perceived educational benefits. These factors may influence purchasing decisions, but they do not necessarily demonstrate the product's actual contribution to learning.
 
-This distinction became central to how I understood product value.
+This distinction is particularly important in EdTech because the person who pays for a product is often different from the person who uses it. Parents may make the purchasing decision, while children are the primary users. What motivates a parent to buy a product may therefore differ from what makes it useful or effective for a child.
 
-## What Makes a Purchase Possible
+## What Makes Parents Decide to Buy?
 
-Through sales conversations and observations of learning devices from established brands, I noticed that purchase decisions could involve several considerations at once.
+During my experience in the industry, I noticed that a child's preference could sometimes be a powerful trigger for a parent's purchasing decision.
 
-A child’s enthusiasm could help trigger a purchase. A parent might be willing to buy when the price felt acceptable and the product appeared to offer educational potential.
+For instance, when a child strongly wants a particular product, parents may be willing to buy it as long as the price falls within their acceptable range. In this situation, the purchase may be driven more by the child's enthusiasm and the parent's willingness to fulfil that preference than by a detailed evaluation of the product's educational effectiveness.
 
-These observations did not establish how frequently each factor determined a sale. They showed me that a purchase could reflect a combination of immediate appeal, affordability, and expectations about future benefits.
+This does not mean that parents do not care about education. Rather, purchasing decisions are influenced by multiple considerations, and educational value is not necessarily the only deciding factor.
 
-The child’s interest was relevant because the product would need their attention to be used. The parent’s willingness to pay was relevant because it made ownership possible. Neither response established what the child would learn through the experience.
+It also means that purchase intention and educational expectations should be understood separately. A child may want a product because it looks attractive or offers enjoyable interactions. A parent may agree to buy it because the price is acceptable and the product appears worthwhile. Neither decision, by itself, establishes whether the product supports meaningful learning.
 
-I therefore began to interpret purchase behaviour as evidence about the appeal of a proposition under particular conditions. It was valuable commercial feedback, while leaving questions about everyday use and educational outcomes open.
+This made me question whether purchase intention should be treated as evidence of educational value. A successful transaction tells us that someone was willing to pay for the product. It does not tell us what the child gained from using it.
 
-## The Promise That Enters the Household
+## Product Quality Sets the Foundation, but Does Not Explain Everything
 
-An educational purchase carries an expectation about what will happen afterwards.
+Another important lesson came from observing the relationship between product development and commercial execution.
 
-A learning device might be expected to support independent study. An AI companion toy might be expected to provide explanations, encouragement, or ongoing learning support. The purchase gives a family access to the product; delivering those benefits depends on the experience that follows.
+In the early stages of bringing a product to market, product quality matters enormously. A product needs to meet an acceptable standard and deliver on its core promises before sales teams and distributors can confidently promote it.
 
-The early AI companion toy made this distinction concrete for me. Its conversational capabilities could invite broad expectations, while the actual experience depended on technical reliability and the limits of the interaction.
+I saw this in the case of our AI companion toy. When the actual product experience did not match the expectations created by its market positioning, some distributors were dissatisfied and stopped working with the product. This illustrated how a gap between product promises and actual delivery can undermine commercial confidence.
 
-A demonstration could show an appealing exchange without establishing how consistently similar exchanges would work in everyday use. Likewise, answering educational questions would not establish that the toy could fulfil the broader role of a tutor.
+However, once a product reaches an acceptable level of quality and can reliably fulfil its main purpose, the factors influencing further growth may change. Sales, marketing, distribution channels, and operational execution can become increasingly important.
 
-I did not have evidence to quantify how any gap between expectations and capability affected returns, retention, or satisfaction. The experience nevertheless gave me a reason to examine whether the benefit attracting a family was one the product could dependably support.
+In other words, product quality establishes the foundation for market entry, while go-to-market execution can become more important for expanding market reach once the product meets the market's minimum expectations.
 
-This was also where commercial communication and product design met. The way a capability was presented helped define the standard against which the family would judge it.
+This does not mean that product quality becomes irrelevant after launch. Rather, the relative importance of different factors may shift depending on the product category and its stage of development.
 
-## Following the Benefit Through Use
+For example, products such as computers are often evaluated heavily in terms of performance and technical specifications. Users may have clear expectations about processing power, reliability, and other functional capabilities. In such categories, product performance itself can remain a major competitive factor.
 
-Looking back, I would assess a product by following its intended benefit beyond the purchase.
+An AI companion toy, on the other hand, may not need to demonstrate the most advanced AI capabilities available. What matters more may be whether it delivers a satisfactory experience in its intended use case. If it can fulfil that core purpose reliably, its commercial performance may depend increasingly on how effectively it is positioned, marketed, and distributed.
 
-If the proposition centred on independent learning, I would want to understand whether children could begin and continue activities without frequent adult intervention. If it promised learning improvement, I would also need evidence related to the particular knowledge or skill being targeted.
+The key is not that one factor is always more important than another. It is that the factors supporting commercial success vary across products and stages.
 
-Usage and satisfaction would remain useful, but their interpretation would depend on the claim.
+## Commercial Performance and Educational Outcomes Are Different Measures
 
-A child returning regularly could indicate interest without revealing what they understood. A parent appreciating reduced supervision could identify a practical benefit without establishing improved learning. Equally, a potentially useful activity would have limited opportunity to help if families rarely used it.
+These observations led me to distinguish several dimensions that are often treated as if they were interchangeable.
 
-These distinctions would help a team recognise different forms of value. Enjoyment, companionship, convenience, and learning could each matter to users. Identifying which benefit was actually supported would make both evaluation and communication more precise.
+Commercial attractiveness: Whether the product appeals to potential buyers and creates a willingness to purchase.
 
-For me, this offered a practical discipline: connect each product claim to evidence that addresses it, rather than asking a single favourable metric to demonstrate the product’s overall value.
+Perceived educational value: Whether parents believe the product can contribute to their children's learning or development.
 
-## Deciding What Needs Attention Next
+Actual learning effectiveness: Whether using the product leads to meaningful improvements in children's knowledge, skills, or learning behaviours.
 
-The working environment also shaped my understanding of the relationship between product quality and commercial execution.
+User satisfaction: Whether parents and children feel that the product meets their expectations and provides a worthwhile experience.
 
-In an early-stage business, improving features, clarifying positioning, setting prices, preparing demonstrations, and reaching customers could all demand attention. A useful product still needed people to discover it and understand its relevance.
+Continued usage: Whether users continue to engage with the product after the initial purchase.
 
-At the same time, stronger promotion would not resolve an unreliable core experience. The priority depended on what was limiting the product at that stage.
+## Evaluating an EdTech Product Beyond Sales
 
-If users could not reliably obtain the intended benefit, that difficulty required product work. If the experience was sufficiently dependable for its intended use, unclear communication or limited access might become more pressing constraints.
+My experience has made me more cautious about treating market success as a direct indicator of educational quality.
 
-I came to see this as a diagnosis to make with evidence, rather than a fixed sequence in which product development ended and marketing took over. Commercial feedback could expose problems in the proposition, while experience after purchase could reveal whether the underlying promise was being fulfilled.
+Commercial success matters because an educational product needs to reach users and remain viable. However, commercial viability and educational effectiveness answer different questions. One concerns whether a product can attract buyers and sustain a business; the other concerns whether it genuinely supports learning.
 
-This was a judgement developed through my work, not a formula I had validated across products.
+For product teams, this distinction matters because designing for purchase is not the same as designing for learning. A product may need to appeal to parents, engage children, fulfil its educational purpose, and remain commercially sustainable. These requirements overlap, but they cannot simply be reduced to one measure of success.
 
-## Bringing the Proposition and the Evidence Together
+Ultimately, an EdTech product should be evaluated from both commercial and educational perspectives. Sales can tell us whether a product has found a market. Actual usage and evidence of learning are needed to understand whether it has fulfilled its educational purpose.
 
-In future product work, I would want the benefit highlighted in a demonstration, the experience being built, and the evidence being collected to remain connected.
-
-A tutoring proposition would require attention to the quality of the learning support. A promise of independent use would require attention to adult intervention. Claims of educational improvement would require evidence beyond engagement alone.
-
-These are considerations I draw from the experience, rather than processes I independently implemented or outcomes I measured.
-
-The broader change in my thinking was to follow value across the product’s relationship with a family: what attracted them, what they expected, what they experienced, and what benefit could reasonably be established.
-
-Commercial performance and educational value both mattered. Understanding their relationship required being precise about the evidence available and the conclusions it could support.
+Commercial success can demonstrate that a product has found a market. It does not, by itself, demonstrate that the product has fulfilled its educational purpose.
 

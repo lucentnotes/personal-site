@@ -17,6 +17,7 @@ npm run preview:site
 
 - `content/professional-insights/Professional-Insights-Final.md`：用户提供的四篇最终正文，保持原文。
 - `content/professional-insights/Professional-Insights-zh.md`：逐段对齐的中文译文，保留原文的职责、观察和验证边界。
+- 后三篇已依据 `Professional_Insights_Three_Articles.docx` 更新标题与正文。文档中的合集封面、副标题和独立总结区块不新增到页面，结论保留在既有正文中。
 - `content/professional-insights/cards.json`：原型中的文章分类。
 - `scripts/build_professional_insights.py`：生成中英文共十个独立页面，共用图片、视频和样式。
 - `public/professional-insights/`：生成页面、样式、阅读目录脚本、主题标志和三张选定图片。
