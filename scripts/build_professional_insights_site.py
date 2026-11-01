@@ -20,5 +20,6 @@ for path, destination in [('index.html', './professional-insights/'), ('work-log
 <meta http-equiv="refresh" content="0;url={destination}"><meta name="robots" content="noindex"><title>Professional Insights</title>
 </head><body><a href="{destination}">Professional Insights →</a></body></html>''')
 expected = {'index.html', 'work-log/index.html', 'professional-insights/index.html'} | {f'professional-insights/{slug}/index.html' for slug in SLUGS}
+expected |= {'professional-insights/zh/index.html'} | {f'professional-insights/zh/{slug}/index.html' for slug in SLUGS}
 assert {p.relative_to(OUTPUT).as_posix() for p in OUTPUT.rglob('*.html')} == expected
-print(f'Production build: {OUTPUT}; five content pages and two legacy redirects.')
+print(f'Production build: {OUTPUT}; ten bilingual content pages and two legacy redirects. English is the default.')

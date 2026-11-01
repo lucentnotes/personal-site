@@ -2,7 +2,7 @@
 
 正式入口：https://suojin311-creator.github.io/eportfolio/professional-insights/
 
-当前发布一个入口页和四个独立文章页。根地址和旧 `/work-log/` 链接跳转到入口，不新增个人首页。旧工作 Log 不再发布。
+当前发布中英文各一个入口页和四个独立文章页。默认英文，所有页面右上角均可切换语言；中文版位于 `/professional-insights/zh/`。切换对应到同一篇文章，返回列表和上下篇导航保持当前语言。根地址和旧 `/work-log/` 链接始终跳转到英文入口，不按浏览器语言或历史选择自动切换。
 
 ## 构建与预览
 
@@ -16,8 +16,9 @@ npm run preview:site
 ## 内容来源
 
 - `content/professional-insights/Professional-Insights-Final.md`：用户提供的四篇最终正文，保持原文。
+- `content/professional-insights/Professional-Insights-zh.md`：逐段对齐的中文译文，保留原文的职责、观察和验证边界。
 - `content/professional-insights/cards.json`：原型中的文章分类。
-- `scripts/build_professional_insights.py`：按已确认的精简配图预览生成五个独立页面。
+- `scripts/build_professional_insights.py`：生成中英文共十个独立页面，共用图片、视频和样式。
 - `public/professional-insights/`：生成页面、样式、阅读目录脚本、主题标志和三张选定图片。
 - `scripts/build_professional_insights_site.py`：正式发布打包与旧链接跳转。
 
