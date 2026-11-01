@@ -1,6 +1,7 @@
 """Render the provided final Markdown into five standalone, refreshable pages."""
 from pathlib import Path
 from html import escape
+from hashlib import sha256
 import json
 import re
 
@@ -9,6 +10,16 @@ CONTENT = ROOT / 'content/professional-insights'
 PAGES = ROOT / 'public/professional-insights'
 SLUGS = ['real-world-adoption', 'parents-expectations', 'ai-product-experience', 'purchase-and-educational-value']
 BASE = 'https://suojin311-creator.github.io/eportfolio/professional-insights/'
+
+def release_version():
+    """Change document URLs when copy, layout, or navigation changes."""
+    digest = sha256()
+    for path in [Path(__file__), CONTENT / 'Professional-Insights-Final.md', CONTENT / 'cards.json', PAGES / 'style.css', PAGES / 'reading.js']:
+        digest.update(path.read_bytes())
+    return digest.hexdigest()[:12]
+
+def versioned(path):
+    return f'{path}?v={release_version()}'
 
 def articles():
     raw = (CONTENT / 'Professional-Insights-Final.md').read_text()
@@ -82,8 +93,8 @@ def shell(title, inner, detail=False, slug='', description=''):
 <meta name="description" content="{escape(description, quote=True)}">
 <link rel="canonical" href="{BASE + (slug + '/' if slug else '')}">
 <link rel="icon" href="{prefix}mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="{prefix}style.css?v=insights6"><script src="{prefix}reading.js?v=insights6" defer></script></head>
-<body><a class="skip" href="#main">Skip to content</a><div class="site"><header class="top"><a class="brand" href="{prefix}">{MARK}Professional Insights</a></header>
+<link rel="stylesheet" href="{versioned(prefix + 'style.css')}"><script src="{versioned(prefix + 'reading.js')}" defer></script></head>
+<body><a class="skip" href="#main">Skip to content</a><div class="site"><header class="top"><a class="brand" href="{versioned(prefix)}">{MARK}Professional Insights</a></header>
 {inner}</div></body></html>'''
 
 def build():
@@ -91,7 +102,7 @@ def build():
     PAGES.mkdir(parents=True, exist_ok=True)
     cards = []
     for i, item in enumerate(data):
-        cards.append(f'''<a class="entry" href="./{item['slug']}/">{ICONS[i]}<span class="meta">{i+1:02d} / {escape(item['category'])}</span><h2>{escape(item['title'])}</h2><span class="entryfoot">{ARROW}</span></a>''')
+        cards.append(f'''<a class="entry" href="{versioned('./' + item['slug'] + '/')}">{ICONS[i]}<span class="meta">{i+1:02d} / {escape(item['category'])}</span><h2>{escape(item['title'])}</h2><span class="entryfoot">{ARROW}</span></a>''')
     overview = '<main class="wrap" id="main"><div class="hero"><div><h1>Seeing products<br>through experience.</h1></div></div><section class="context" aria-label="Work background"><p class="sub">Early-stage EdTech experience across platform operations, user and sales feedback, AI response testing, and product coordination.</p></section><div class="grid">' + '\n'.join(cards) + '</div></main>'
     (PAGES / 'index.html').write_text(shell('Professional Insights', overview, description='Four perspectives from early-stage EdTech experience.'))
     photo_info = {
@@ -105,9 +116,9 @@ def build():
         if i in photo_info:
             filename, alt, caption = photo_info[i]
             photo = f'<figure class="article-photo"><img src="../photos/{filename}" alt="{alt}" width="{1672 if i == 1 else 1078 if i == 2 else 1517}" height="{830 if i == 1 else 525 if i == 2 else 753}">' + (f'<figcaption>{caption}</figcaption>' if caption else '') + '</figure>'
-        previous = (f'<a rel="prev" href="../{data[i-1]["slug"]}/"><span>← Previous essay</span>{escape(data[i-1]["title"])}</a>' if i else '<span></span>')
-        following = (f'<a rel="next" href="../{data[i+1]["slug"]}/"><span>Next essay →</span>{escape(data[i+1]["title"])}</a>' if i+1 < len(data) else '<a href="../"><span>Series complete</span>All insights →</a>')
-        page = f'''<main class="wrap detail" id="main"><a class="back" href="../">← All insights</a><header class="articleheader">{ICONS[i]}<p class="meta">{i+1:02d} / {escape(item['category'])}</p><h1>{escape(item['title'])}</h1></header>
+        previous = (f'<a rel="prev" href="{versioned("../" + data[i-1]["slug"] + "/")}"><span>← Previous essay</span>{escape(data[i-1]["title"])}</a>' if i else '<span></span>')
+        following = (f'<a rel="next" href="{versioned("../" + data[i+1]["slug"] + "/")}"><span>Next essay →</span>{escape(data[i+1]["title"])}</a>' if i+1 < len(data) else f'<a href="{versioned("../")}"><span>Series complete</span>All insights →</a>')
+        page = f'''<main class="wrap detail" id="main"><a class="back" href="{versioned('../')}">← All insights</a><header class="articleheader">{ICONS[i]}<p class="meta">{i+1:02d} / {escape(item['category'])}</p><h1>{escape(item['title'])}</h1></header>
 <div class="reading"><aside class="toc"><nav aria-label="In this essay"><p class="meta">In this essay</p>{toc}</nav></aside><div class="reading-column"><details class="mobile-toc"><summary>In this essay</summary><nav aria-label="Article contents">{toc}</nav></details>{photo}<article class="body">{body}</article><nav class="articleend" aria-label="Essay navigation">{previous}{following}</nav></div></div></main>'''
         target = PAGES / item['slug']; target.mkdir(exist_ok=True)
         (target / 'index.html').write_text(shell(item['title'], page, True, item['slug'], item['subtitle']))

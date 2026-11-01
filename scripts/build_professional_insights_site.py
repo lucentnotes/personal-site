@@ -1,7 +1,7 @@
 """Publish only the approved Professional Insights section and legacy redirects."""
 from pathlib import Path
 import shutil
-from build_professional_insights import build, SLUGS
+from build_professional_insights import build, SLUGS, versioned
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'site-dist'
@@ -12,6 +12,7 @@ OUTPUT.mkdir()
 shutil.copytree(ROOT / 'public/professional-insights', OUTPUT / 'professional-insights')
 (OUTPUT / '.nojekyll').touch()
 for path, destination in [('index.html', './professional-insights/'), ('work-log/index.html', '../professional-insights/')]:
+    destination = versioned(destination)
     target = OUTPUT / path
     target.parent.mkdir(exist_ok=True)
     target.write_text(f'''<!doctype html>

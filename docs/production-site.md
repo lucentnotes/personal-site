@@ -13,6 +13,10 @@
 
 文章路由均为目录下独立的 `index.html`，可直接打开、刷新，不依赖服务器端路由或 JavaScript。图片保持原比例；家长期待篇保留 AI 插图标注。目录脚本只增强当前章节提示，禁用 JavaScript 仍可阅读和导航。
 
+GitHub Pages 的 HTML 缓存可保留 10 分钟。构建会根据正文、排版和生成脚本计算发布版本，将该版本统一用于入口、卡片、返回列表、上一篇／下一篇和 CSS/JS 地址；根路径及旧 Log 的跳转也指向同一版本。不得只为临时直达链接手动加参数，而让站内导航落回旧的缓存地址。
+
+导航回归检查：`python3 -m unittest discover -s tests -p 'test_insights_navigation.py'`（先构建）。发布后还应从文章返回列表，再逐一点击卡片核对新增图片，而非仅验证直达文章地址。
+
 正文来源：`content/professional-insights/Professional-Insights-Final.md`。入口及辅助文字按用户批准的精简配图版预览制作，不新增经历、数据或成果。首页和其他板块不另作设计。
 
 历史源码与既有未提交改动应保留，不随此次发布混入正式产物。
