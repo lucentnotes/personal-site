@@ -15,7 +15,7 @@ BASE = 'https://suojin311-creator.github.io/eportfolio/professional-insights/'
 def release_version():
     """Change document URLs when copy, layout, or navigation changes."""
     digest = sha256()
-    for path in [Path(__file__), CONTENT / 'Professional-Insights-Final.md', CONTENT / 'Professional-Insights-zh.md', CONTENT / 'cards.json', PAGES / 'style.css', PAGES / 'reading.js', PAGES / 'mark.svg']:
+    for path in [Path(__file__), CONTENT / 'Professional-Insights-Final.md', CONTENT / 'Professional-Insights-zh.md', CONTENT / 'cards.json', PAGES / 'style.css', PAGES / 'reading.js', PAGES / 'mark.svg', PAGES / 'fonts/manrope.woff']:
         digest.update(path.read_bytes())
     return digest.hexdigest()[:12]
 
@@ -152,6 +152,8 @@ def shell(title, inner, detail=False, slug='', description='', lang='en'):
     ui = UI[lang]
     prefix = asset_prefix(lang, detail)
     list_path = '../' if detail else './'
+    name_lines = ('Professional', 'Insights') if lang == 'en' else ('产品', '思考')
+    wordmark = '<span class="brand-wordmark">' + ''.join(f'<span>{text}</span>' for text in name_lines) + '</span>'
     language_links = []
     for target, label, code in [('en', 'English', 'en'), ('zh', '中文', 'zh-CN')]:
         selected = ' aria-current="page"' if lang == target else ''
@@ -168,8 +170,9 @@ def shell(title, inner, detail=False, slug='', description='', lang='en'):
 <link rel="alternate" hreflang="zh-CN" href="{BASE + language_path('zh', slug)}">
 <link rel="alternate" hreflang="x-default" href="{BASE + language_path('en', slug)}">
 <link rel="icon" href="{versioned(prefix + 'mark.svg')}" type="image/svg+xml">
+<link rel="preload" href="{prefix}fonts/manrope.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="{versioned(prefix + 'style.css')}"><script src="{versioned(prefix + 'reading.js')}" defer></script></head>
-<body><a class="skip" href="#main">{ui['skip']}</a><div class="site"><header class="top"><a class="brand" href="{versioned(list_path)}">{MARK}{ui['brand']}</a>{language_nav}</header>
+<body><a class="skip" href="#main">{ui['skip']}</a><div class="site"><header class="top"><a class="brand" href="{versioned(list_path)}" aria-label="{ui['brand']}">{MARK}<span class="brand-divider" aria-hidden="true"></span>{wordmark}</a>{language_nav}</header>
 {inner}</div></body></html>'''
 
 def build():
