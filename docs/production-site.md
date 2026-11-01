@@ -1,17 +1,18 @@
 # 正式站点
 
-正式地址：https://suojin311-creator.github.io/eportfolio/
+入口：https://suojin311-creator.github.io/eportfolio/professional-insights/
 
-目前唯一内容为已确认的工作 Log。没有独立首页或其他项目页。旧的 `/work-log/` 地址仅跳转到根地址，保留查询参数和锚点。
+发布范围为入口页和四篇独立文章页。根路径与 `/work-log/` 为兼容旧链接的跳转，旧工作 Log 和其他历史页面不在发布产物中。
 
-## 内容与构建
+## 发布
 
-- 页面源码：`public/work-log/`。
-- 构建命令：`npm run build:site`。
-- 发布产物：`site-dist/`。它仅复制工作 Log 与其资源，不复制 `public/` 下的历史草稿。
-- 本地检查：`npm run preview:site`。
-- GitHub Pages：`gh-pages` 分支根目录。
+1. `npm run build:site` 从最终 Markdown 生成页面并输出 `site-dist/`。
+2. 本地检查正文、目录、图片、返回列表和上一篇／下一篇导航。
+3. 将 `site-dist/` 完整同步到 GitHub Pages 的 `gh-pages` 分支根目录，移除产物之外的旧页面与资源。
+4. 推送后验证正式入口、四个文章直达链接及旧地址跳转。
 
-更新正式站点时，应将 `site-dist/` 完整同步到发布分支，移除不在产物中的历史页面。不要使用旧版 React/Vite 构建或离线审阅包覆盖正式站点。
+文章路由均为目录下独立的 `index.html`，可直接打开、刷新，不依赖服务器端路由或 JavaScript。图片保持原比例；家长期待篇保留 AI 插图标注。目录脚本只增强当前章节提示，禁用 JavaScript 仍可阅读和导航。
 
-历史首页、成长包案例、视觉探索和文档在源码及 Git 历史中保留，未随本次正式站点发布。既有未提交的历史开发改动不属于本次发布。
+正文来源：`content/professional-insights/Professional-Insights-Final.md`。入口及辅助文字按用户批准的精简配图版预览制作，不新增经历、数据或成果。首页和其他板块不另作设计。
+
+历史源码与既有未提交改动应保留，不随此次发布混入正式产物。

@@ -1,0 +1,22 @@
+[
+  {
+    "category": "User adoption",
+    "summary": "Why functional features can still feel uncomfortable, difficult to use, or disconnected from everyday needs.",
+    "time": 5
+  },
+  {
+    "category": "Family expectations",
+    "summary": "What parents want a product to handle, and where they want to remain involved.",
+    "time": 5
+  },
+  {
+    "category": "AI product design",
+    "summary": "How a more specific purpose can guide the experience of an AI companion toy.",
+    "time": 5
+  },
+  {
+    "category": "Product value",
+    "summary": "What purchase decisions reveal, and what remains to be examined after the sale.",
+    "time": 5
+  }
+]

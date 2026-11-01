@@ -1,30 +1,26 @@
-# 个人网站：工作 Log
+# Professional Insights
 
-正式站点：https://suojin311-creator.github.io/eportfolio/
+正式入口：https://suojin311-creator.github.io/eportfolio/professional-insights/
 
-当前仅发布一篇工作 Log：**产品被认可之后，谁负责让它起作用？** 首页直接展示全文，暂不发布个人首页、项目列表或其他案例。
+当前发布一个入口页和四个独立文章页。根地址和旧 `/work-log/` 链接跳转到入口，不新增个人首页。旧工作 Log 不再发布。
 
-## 正式站点构建
+## 构建与预览
 
 ```sh
 npm run build:site
 npm run preview:site
 ```
 
-构建只需 Python 3；无需安装前端依赖。输出目录为 `site-dist/`，预览端口为 4173。将该目录完整同步到 `gh-pages` 根目录即可发布。
+只需 Python 3；产物为 `site-dist/`，本地预览端口 4173。将产物完整同步到 `gh-pages` 根目录发布。
 
-## 修改内容
+## 内容来源
 
-- `public/work-log/index.html`：正文与结构。
-- `public/work-log/style.css`：绿色视觉、正文与图形的统一阅读边界、响应式展示。
-- `public/work-log/page.js`：界面对照、连续路径、动画播放与图片放大。
-- `public/work-log/assets/`：原素材的已确认处理版本与标记为方案示意的目标界面。
-- `scripts/build_work_log_site.py`：单页正式发布构建。
+- `content/professional-insights/Professional-Insights-Final.md`：用户提供的四篇最终正文，保持原文。
+- `content/professional-insights/cards.json`：原型中的文章分类。
+- `scripts/build_professional_insights.py`：按已确认的精简配图预览生成五个独立页面。
+- `public/professional-insights/`：生成页面、样式、阅读目录脚本、主题标志和三张选定图片。
+- `scripts/build_professional_insights_site.py`：正式发布打包与旧链接跳转。
 
-旧的 `/work-log/` 链接会跳转到根地址。正文、箭头关系、原界面完整比例和无水印素材保持已确认版本。
+家长期待篇的场景图为用户指定的 AI 插图，页面保留标注。展会及玩具店图片为用户提供的实拍。未使用其他 AI 模拟实景图。
 
-## 历史开发内容
-
-原 React/Vite 首页、案例和审阅文档保留在仓库中，供后续参考，不属于当前正式站点。旧的 `npm run build` 和离线预览命令用于历史开发，不能作为正式发布产物。
-
-发布范围与操作细节见 [正式站点说明](docs/production-site.md)。
+历史 React/Vite 页面和旧工作 Log 保留在源码中，不属于当前正式发布内容。不要用旧 `npm run build` 的产物覆盖正式站点。详见 [发布说明](docs/production-site.md)。
