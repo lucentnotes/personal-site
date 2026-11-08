@@ -12,7 +12,7 @@ def place(name,start,source,duration,fadein,fadeout,gain):
  n=round(duration*sr);a=round(start*sr);v=tracks[name][round(source*sr):round(source*sr)+n].copy();tt=np.arange(len(v))/sr
  e=ease(tt/fadein) if fadein else np.ones(len(v));e*=1-ease((tt-(duration-fadeout))/fadeout)
  edit[a:a+len(v)]+=v*e[:,None]*gain
-place('reverie',0,0,121.5/1.25,3/1.25,(121.5-119.25)/1.25,.72)
+place('reverie',0,0,121.5/1.25,3/1.25,(121.5-114.2)/1.25,.72)
 place('moonlight',145.45/1.25,1.8,seconds-145.45/1.25,.08,2,.88)
 for name,audio in [('edit',edit)]:
  wav=work/(name+'.wav')
