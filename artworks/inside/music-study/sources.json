@@ -1,0 +1,48 @@
+{
+  "status": "audition_only_not_main_film",
+  "baseSpeed": 1.25,
+  "durationSecondsAtNew1x": 152.8,
+  "composition": "Project-authored note sequences in tools/render_score.py; no external song used",
+  "instrument": "TimGM6mb.sf2",
+  "instrumentLicense": "GPL-2, documented sample provenance; see instrument-source-license.txt",
+  "source": "https://github.com/musescore/musescore-old/commit/90c33ef9d87b3f5ff92efd3b07d89eb455fb1fef",
+  "arrangement": [
+    [
+      "0–34",
+      "Original opening, fade in then leave"
+    ],
+    [
+      "34–84.5",
+      "No score: rice/room/platform/bus foley"
+    ],
+    [
+      "84.5–103.5",
+      "Sparse bass and isolated upper notes"
+    ],
+    [
+      "103.5–112.5",
+      "No score: typing"
+    ],
+    [
+      "112.5–121.5",
+      "Light voicing, exit fade ends outside shop"
+    ],
+    [
+      "121.5–145.45",
+      "No score: phone and ballroom crowd"
+    ],
+    [
+      "145.45–160",
+      "Exact original track opening at neck touch; no accent boost"
+    ],
+    [
+      "160–176.5",
+      "No score: mistaken recognition"
+    ],
+    [
+      "176.5–189",
+      "Sparse classroom voicing; gesture wait separately loops quietly"
+    ]
+  ],
+  "arrangementTimes": "original logical timeline; divide by 1.25 for default viewing time"
+}

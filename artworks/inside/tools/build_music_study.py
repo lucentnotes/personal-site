@@ -1,0 +1,13 @@
+from pathlib import Path
+import re,hashlib
+r=Path(__file__).resolve().parents[1];out=r/'music-study';view=out/'view';view.mkdir(exist_ok=True)
+s=(r/'film.js').read_text();a=s.index('function scoreEnvelope()');b=s.index('\nfunction scorePlayhead()',a);s=s[:a]+'''function scoreEnvelope(){return 1;}
+function scoreTargetTime(){return t;}
+'''+s[b:];s=s.replace("source.loop=true;source.connect(audio._score)","source.loop=true;source.loopStart=176.5/rate;source.loopEnd=185/rate;source.connect(audio._score)");s=s.replace("audio?._scoreBuffer?.duration||71.111111","audio?._scoreBuffer?.duration||191");(view/'film.js').write_text(s)
+html=(r/'index.html').read_text();html=html.replace('assets/','../../assets/');html=html.replace('src="../../assets/inside-piano.mp3"','src="../score-original-clock.mp3"');
+for suffix in ['125','15625','1875','25']:html=html.replace(f'../../assets/inside-piano-{suffix}.mp3',f'../score-{suffix}.mp3')
+for f in ['style.css','immersive.css','content.js','timing.js','immersive.js']:
+ h=hashlib.sha256((r/f).read_bytes()).hexdigest()[:10];html=html.replace(f'"{f}"',f'"../../{f}?v={h}"')
+hash=hashlib.sha256((view/'film.js').read_bytes()).hexdigest()[:10];html=html.replace('src="film.js"',f'src="film.js?v={hash}"');(view/'index.html').write_text(html)
+(out/'index.html').write_text('''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一幕 · 配乐试听版</title><style>html{background:#203b47;color:#d6ded3;font-family:Georgia,'Noto Serif CJK SC',serif}body{max-width:680px;margin:9vh auto;padding:0 24px 50px}h1{font-size:32px;font-weight:400;letter-spacing:4px}p{font-size:15px;line-height:2;color:#b9c9c3}a{color:#e2e3d4}audio{width:100%;margin:16px 0 8px}nav{display:flex;gap:28px;margin:30px 0}nav a{padding-bottom:10px;border-bottom:1px solid #b1c4b577;text-decoration:none}small{display:block;font-size:12px;line-height:1.9;color:#9db3b1}hr{border:0;border-top:1px solid #819c9255;margin:32px 0}</style><h1>让音乐留下空隙</h1><p>第一幕配乐试听版 · 正式版保持不变</p><nav><a href="view/">结合画面观看 ↗</a><a href="view/?lang=en">English ↗</a></nav><p>开场保留主题，站台让给脚步和雨声；手机与打字段减少旋律。出店后停下来，直到舞会触颈处，原曲第一声重新响起。结尾只留下稀疏的琴音。</p><hr><p>只听配乐 · 约 2 分 33 秒</p><audio controls preload="metadata" src="score-125.mp3"></audio><small>中间的安静段落为有意留白。此播放器不含环境音；请用上方“结合画面观看”听完整声场。采用已确认的新 1x 基准。</small><p>试听重点：没有旋律时画面是否撑得住；舞会音乐回来时是否更有感觉；结尾是否足够克制。</p><hr><small>音乐由项目内编写的音符序列重新编配，无外部歌曲。钢琴音色 TimGM6mb（Tim Brechbill / David Bolton），来源和许可记录见 <a href="sources.json">资源记录</a>、<a href="instrument-source-license.txt">音色许可</a>。不将“自行生成”当作版权豁免，保留生成脚本与来源供复核。</small></html>''')
+print('Isolated music study built; main film untouched')
