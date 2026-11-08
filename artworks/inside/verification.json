@@ -1,0 +1,173 @@
+{
+  "results": [
+    {
+      "lang": "zh",
+      "visual": {
+        "echo": [
+          0.24635568513119532,
+          0.09839650145772597,
+          0
+        ],
+        "dim": {
+          "light": 0,
+          "crowd": 0.58,
+          "departure": 0
+        },
+        "bright": {
+          "light": 1,
+          "crowd": 0,
+          "departure": 1
+        },
+        "duration": 187,
+        "hold": 6
+      },
+      "speedResults": [
+        {
+          "rate": 1.25,
+          "observed": 1.243305279265374,
+          "pitchPreserved": true,
+          "audioSynced": true
+        },
+        {
+          "rate": 1.5,
+          "observed": 1.5067811934867301,
+          "pitchPreserved": true,
+          "audioSynced": true
+        },
+        {
+          "rate": 2,
+          "observed": 1.9926425505870444,
+          "pitchPreserved": true,
+          "audioSynced": true
+        }
+      ],
+      "reloadReset": true,
+      "historyReset": true,
+      "mobile": true
+    },
+    {
+      "lang": "en",
+      "visual": {
+        "echo": [
+          0.24635568513119532,
+          0.09839650145772597,
+          0
+        ],
+        "dim": {
+          "light": 0,
+          "crowd": 0.58,
+          "departure": 0
+        },
+        "bright": {
+          "light": 1,
+          "crowd": 0,
+          "departure": 1
+        },
+        "duration": 187,
+        "hold": 6
+      },
+      "speedResults": [
+        {
+          "rate": 1.25,
+          "observed": 1.2577370169109172,
+          "pitchPreserved": true,
+          "audioSynced": true
+        },
+        {
+          "rate": 1.5,
+          "observed": 1.495628163815179,
+          "pitchPreserved": true,
+          "audioSynced": true
+        },
+        {
+          "rate": 2,
+          "observed": 1.992641422667419,
+          "pitchPreserved": true,
+          "audioSynced": true
+        }
+      ],
+      "reloadReset": true,
+      "historyReset": true,
+      "mobile": true
+    }
+  ],
+  "errors": [],
+  "finalVisualCheck": {
+    "results": [
+      {
+        "lang": "zh",
+        "visual": {
+          "echo": [
+            0.24635568513119532,
+            0.09839650145772597,
+            0
+          ],
+          "dim": {
+            "light": 0,
+            "crowd": 0.42,
+            "departure": 0
+          },
+          "bright": {
+            "light": 1,
+            "crowd": 0,
+            "departure": 1
+          },
+          "duration": 187,
+          "hold": 6
+        },
+        "reloadReset": true,
+        "historyReset": true,
+        "mobile": true
+      },
+      {
+        "lang": "en",
+        "visual": {
+          "echo": [
+            0.24635568513119532,
+            0.09839650145772597,
+            0
+          ],
+          "dim": {
+            "light": 0,
+            "crowd": 0.42,
+            "departure": 0
+          },
+          "bright": {
+            "light": 1,
+            "crowd": 0,
+            "departure": 1
+          },
+          "duration": 187,
+          "hold": 6
+        },
+        "reloadReset": true,
+        "historyReset": true,
+        "mobile": true
+      }
+    ],
+    "errors": []
+  },
+  "offline": {
+    "results": [
+      {
+        "lang": "ZH",
+        "offline": true,
+        "rate": 2,
+        "source": 1,
+        "buffer": 35.55478458049887,
+        "delta": 0.03911972789112639,
+        "t": 60.63340000000001
+      },
+      {
+        "lang": "EN",
+        "offline": true,
+        "rate": 2,
+        "source": 1,
+        "buffer": 35.55478458049887,
+        "delta": 0.05993605442178307,
+        "t": 60.66660000000001
+      }
+    ],
+    "errors": []
+  }
+}
