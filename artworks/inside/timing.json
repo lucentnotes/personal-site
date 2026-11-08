@@ -269,6 +269,16 @@
           "note": "这条只在便利店画面显示；其后空白手机特写停留 2.5 秒"
         },
         {
+          "zh": "什么都没有。",
+          "en": "Nothing.",
+          "localStart": 31.0,
+          "localEnd": 36.0,
+          "read": 2.0,
+          "hold": 3.0,
+          "subtitleOnly": true,
+          "note": "出便利店后的锁屏上滑与回弹结束，再显示；使用原有停留段，不顺延舞会。"
+        },
+        {
           "zh": "那个梦是后来才来的。",
           "en": "The dream came later.",
           "localStart": 36.0,
@@ -419,7 +429,8 @@
     "Original piano strongest attack is aligned to the neck-touch music return. Notes show both thumbs typing with synchronized, audible key clicks.",
     "Use handoff (4) for opening cold-window sequence and ending classroom sequence. Retain all previously approved shop/phone edits and recognition ordering.",
     "User confirmed the music cue is the FIRST SOUND AT THE BEGINNING OF THE TRACK, not the measured energy peak.",
-    "Revision 12: remove sill-hand shot; glass reflection continues through heartbreak caption. Hard cut to wide dinner at beginning of 不知道从什么时候. Add another 3 seconds after phone swipe: six seconds total blank hold. Clip city buildings to window glass, frame in foreground."
+    "Revision 12: remove sill-hand shot; glass reflection continues through heartbreak caption. Hard cut to wide dinner at beginning of 不知道从什么时候. Add another 3 seconds after phone swipe: six seconds total blank hold. Clip city buildings to window glass, frame in foreground.",
+    "After the outside-phone swipe and lock-screen rebound finish, show 什么都没有。 / Nothing. at shot 01-04 local 31–36 s. Use the existing hold; subsequent timings stay unchanged."
   ],
   "previousSource": {
     "source": "Inside-Codex-Handoff (2).html",

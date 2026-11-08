@@ -304,5 +304,34 @@
     "errors": [],
     "oldCrowdRequested": false,
     "candidatesIntegrated": false
+  },
+  "outsidePhoneNothingCaption": {
+    "results": [
+      {
+        "lang": "zh",
+        "offline": false,
+        "before": "",
+        "text": "什么都没有。",
+        "hand": false,
+        "clock": 0,
+        "next": "那个梦是后来才来的。",
+        "count": 40,
+        "duration": 187,
+        "hold": 6
+      },
+      {
+        "lang": "en",
+        "offline": true,
+        "before": "",
+        "text": "Nothing.",
+        "hand": false,
+        "clock": 0,
+        "next": "The dream came later.",
+        "count": 40,
+        "duration": 187,
+        "hold": 6
+      }
+    ],
+    "errors": []
   }
 }
