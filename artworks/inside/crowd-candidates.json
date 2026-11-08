@@ -1,5 +1,5 @@
 {
-  "status": "awaiting_user_selection",
+  "status": "A_selected_pending_source_download",
   "integrated": false,
   "candidates": [
     {
@@ -10,7 +10,7 @@
       "source": "https://freesound.org/people/brunoboselli/sounds/757318/",
       "description": "会议茶歇中距离录音，模糊的多人交谈，主要为英语。",
       "license": "CC0-1.0",
-      "approved": false
+      "approved": true
     },
     {
       "id": "B",
@@ -32,5 +32,6 @@
       "license": "CC0-1.0",
       "approved": false
     }
-  ]
+  ],
+  "selected": "A"
 }
