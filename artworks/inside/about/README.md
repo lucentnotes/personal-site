@@ -13,3 +13,7 @@ Local checks: both languages, 1440 desktop, 390/320 mobile no horizontal overflo
 ## Focused narrative revision
 
 The page follows one argument: original writing → a specific design decision → how AI-assisted work implemented that decision. A compact hero gives authorship, scope and entry. A single primary case contrasts the old window with the notebook recording. The four-step workflow uses the same case and distinguishes author decisions from AI implementation. Sound is secondary; details and implementation tools start collapsed. Shared cold-blue palette and header typography remain unchanged. Local QA covered English/Chinese, 1440px desktop, 390/320px mobile, working links, disclosure controls, video playback and repeated language switching. Default desktop page height reduced from approximately 5,300px to 3,340px at the same viewport.
+
+## Introduction cleanup
+
+Removed the category prefix in the hero, secondary jump link and redundant explanatory notes in both languages. Tools disclosure starts open. The notebook demonstration is re-recorded with retracting hands, corrected cover/arm occlusion and simplified palm contours; the scoped drawing source is media-source/notebook-demo.js. The main artwork runtime is unchanged. Video and poster references carry content hashes to avoid stale media.
