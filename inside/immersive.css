@@ -39,3 +39,11 @@ body.immersive #interaction{left:50%;top:62%;transform:translateX(-50%);width:19
 body.immersive #gestureText{font-size:17px;letter-spacing:4px;margin:0 0 18px;color:#d1d8c9}
 body.immersive #interaction input{width:100%;margin:0;touch-action:none}
 body.immersive #canvas{touch-action:none}
+
+/* End card settles over the street instead of cutting onto it. */
+body #ending:not([hidden]){animation:ending-veil 1.6s cubic-bezier(.22,.61,.36,1) both}
+body #ending:not([hidden]) .endnote{animation:ending-title 1.8s cubic-bezier(.22,.61,.36,1) .18s both}
+body #ending:not([hidden]) .ending-actions{animation:ending-title 1.5s cubic-bezier(.22,.61,.36,1) .65s both}
+@keyframes ending-veil{from{opacity:0}to{opacity:1}}
+@keyframes ending-title{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){body #ending:not([hidden]),body #ending:not([hidden]) .endnote,body #ending:not([hidden]) .ending-actions{animation-duration:.01s;animation-delay:0s}}
