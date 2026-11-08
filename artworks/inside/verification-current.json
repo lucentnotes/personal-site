@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "lang": "zh",
+      "defaultRate": 1.25,
+      "observedRate": 1.2729154346615292,
+      "ending": {
+        "order": [
+          "replay",
+          "nextAct"
+        ],
+        "left": true,
+        "borders": [
+          "1px",
+          "1px"
+        ],
+        "disabled": true,
+        "ending": "第二幕\n·\n纸上的房间\n\n重新观看\n待续"
+      },
+      "crowdControlTestWithTransportFixture": true,
+      "actualRemoteAudioPlaybackVerified": false,
+      "mobile": true
+    },
+    {
+      "lang": "en",
+      "defaultRate": 1.25,
+      "observedRate": 1.284052495529754,
+      "ending": {
+        "order": [
+          "replay",
+          "nextAct"
+        ],
+        "left": true,
+        "borders": [
+          "1px",
+          "1px"
+        ],
+        "disabled": true,
+        "ending": "ACT II\n·\nA Room on Paper\n\nWatch again\nTo be continued"
+      },
+      "crowdControlTestWithTransportFixture": true,
+      "actualRemoteAudioPlaybackVerified": false,
+      "mobile": true
+    }
+  ],
+  "errors": []
+}

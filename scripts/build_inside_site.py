@@ -1,10 +1,16 @@
-"""Build the isolated literary artwork without changing the portfolio build."""
+"""Build approved runtime only, independently of the portfolio homepage."""
 from pathlib import Path
 import shutil
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE, OUTPUT = ROOT/'artworks/inside', ROOT/'inside-dist'
 if OUTPUT.exists():
     shutil.rmtree(OUTPUT)
-shutil.copytree(SOURCE, OUTPUT)
+OUTPUT.mkdir()
+for name in ('index.html', 'immersive-preview.html', 'style.css', 'immersive.css',
+             'film.js', 'immersive.js', 'content.js', 'content.json', 'timing.js',
+             'timing.json', 'score-cue.json', 'crowd-candidates.json', 'README.md'):
+    shutil.copy2(SOURCE/name, OUTPUT/name)
+shutil.copytree(SOURCE/'assets', OUTPUT/'assets',
+                ignore=shutil.ignore_patterns('ballroom-murmur.mp3'))
 (OUTPUT/'.nojekyll').touch()
 print(f'What Stays: {OUTPUT}')

@@ -24,3 +24,6 @@ window.addEventListener('filmratechange',event=>{const rate=event.detail;documen
 document.addEventListener('pointerdown',event=>{if(!event.target.closest('.speed-control'))closeSpeed();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!speedOptions.hidden){closeSpeed();speedToggle.focus();}});
 window.addEventListener('pageshow',event=>{if(event.persisted)closeSpeed();});
+
+if(isEnglish){document.querySelector('#ending .ending-act').textContent='ACT II';document.querySelector('#ending .ending-name').textContent='A Room on Paper';document.getElementById('replay').innerHTML='Watch again'+document.getElementById('replay').querySelector('svg').outerHTML;document.getElementById('nextAct').textContent='To be continued';document.getElementById('nextAct').ariaLabel='Act II is not available yet';}
+setInterval(()=>document.body.classList.toggle('is-ending',filmInspection.state.finished),100);

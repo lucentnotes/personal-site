@@ -6,7 +6,7 @@ OUT = ROOT/'deliverables'
 OUT.mkdir(exist_ok=True)
 html = (ROOT/'index.html').read_text()
 for lang in ['zh', 'en']:
-    page = html
+    page = html.replace('id="crowdAudio" src="https://cdn.freesound.org/previews/757/757318_300738-hq.mp3"', 'id="crowdAudio" data-unavailable="offline"')
     for name in ['style.css', 'immersive.css']:
         page = page.replace(f'<link rel="stylesheet" href="{name}">', '<style>'+(ROOT/name).read_text()+('\n/* '+(ROOT/'assets/fonts/OFL-Cormorant-Garamond.txt').read_text()+' */' if name=='immersive.css' else '')+'</style>')
     for name in ['content.js', 'timing.js', 'film.js', 'immersive.js']:

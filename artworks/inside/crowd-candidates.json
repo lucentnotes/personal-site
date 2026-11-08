@@ -1,6 +1,6 @@
 {
-  "status": "A_selected_pending_source_download",
-  "integrated": false,
+  "status": "A_selected_remote_playback_configured",
+  "integrated": true,
   "candidates": [
     {
       "id": "A",
@@ -33,5 +33,9 @@
       "approved": false
     }
   ],
-  "selected": "A"
+  "selected": "A",
+  "delivery": "browser_direct_remote_audio",
+  "offlineEmbedded": false,
+  "sourcePlaybackVerified": false,
+  "mediaURL": "https://cdn.freesound.org/previews/757/757318_300738-hq.mp3"
 }
