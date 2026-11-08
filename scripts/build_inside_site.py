@@ -14,6 +14,7 @@ shutil.copytree(SOURCE/'assets', OUTPUT/'assets',
                 ignore=shutil.ignore_patterns('ballroom-murmur.mp3'))
 shutil.copytree(SOURCE/'audition', OUTPUT/'audition')
 shutil.copytree(SOURCE/'licensed-score', OUTPUT/'licensed-score')
+shutil.copytree(SOURCE/'about', OUTPUT/'about')
 # Content hashes prevent a returning viewer from running an earlier scene script.
 for entry in ('index.html', 'immersive-preview.html'):
     text = (OUTPUT/entry).read_text()
