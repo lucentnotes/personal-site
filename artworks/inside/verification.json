@@ -252,5 +252,46 @@
       }
     ],
     "errors": []
+  },
+  "openingFadeAndBallroomMurmur": {
+    "results": [
+      {
+        "offline": false,
+        "envelope": {
+          "xs": [
+            0,
+            0.5,
+            1,
+            1
+          ],
+          "volume": "24"
+        },
+        "crowdAudible": {
+          "peak": 0.021351175382733345,
+          "gain": 0.06075175106525421,
+          "score": 0
+        },
+        "crowdAfterDeparture": 0.0003163561341352761
+      },
+      {
+        "offline": true,
+        "envelope": {
+          "xs": [
+            0,
+            0.5,
+            1,
+            1
+          ],
+          "volume": "24"
+        },
+        "crowdAudible": {
+          "peak": 0.02590971067547798,
+          "gain": 0.060991957783699036,
+          "score": 0
+        },
+        "crowdAfterDeparture": 0.0003637821355368942
+      }
+    ],
+    "errors": []
   }
 }

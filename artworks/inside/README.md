@@ -24,7 +24,7 @@
 
 `timing.json` 是逐句中英文字幕的权威时间表，`timing.js` 为浏览器版本。以 handoff (4) 的开头和结尾为基础，保留后续用户确认的删句、分句和停留。两种语言共用 39 条字幕、187 秒固定时间线，末尾交互等待不计时。`film.js` 中的动作与拟音时间点随字幕统一计算。
 
-当前没有人声旁白。环境与拟音由 Web Audio 本地合成，包括雨声、倒饭、碗底、脚步、行李轮、硬币、扫码、纸袋、打字、衣料、落座和舞会声场。`assets/inside-piano.mp3` 为自编钢琴循环；默认音量 32%，出便利店后完全淡出，舞会触颈时从 0:00 恢复。
+当前没有人声旁白。环境与拟音由 Web Audio 本地合成，包括雨声、倒饭、碗底、脚步、行李轮、硬币、扫码、纸袋、打字、衣料、落座和舞会声场。`assets/inside-piano.mp3` 为自编钢琴循环；默认音量 24%，出便利店后完全淡出，舞会触颈时从 0:00 恢复。
 
 钢琴渲染脚本为 `tools/render_score.py`，使用 FluidSynth 和系统 TimGM6mb piano。音色来源：Tim Brechbill (2004)、David Bolton (2010)，TimGM6mb SoundFont（GPL-2；未分发完整 SoundFont）。[原始音色记录](https://github.com/musescore/musescore-old/commit/90c33ef9d87b3f5ff92efd3b07d89eb455fb1fef)。`tools/render_speed_scores.py` 使用 FFmpeg atempo 生成三档保持音高的配乐。
 
@@ -50,3 +50,7 @@
 6. 门外还在说话 / Voices Beyond the Door
 7. 下周还来吗 / Next Week, Too?
 8. 旧稿里的雨 / Rain on the Page
+
+## 开场与舞会声音调整
+
+配乐默认降至 24%，开场前三秒渐入，舞会触颈时仍从曲头第一声恢复。舞会初始新增轻微的无可辨词人群底声，随可见人群散去淡出。assets/ballroom-murmur.mp3 为本项目生成的多层语音共振合成底声，不包含对白或外部录音。
