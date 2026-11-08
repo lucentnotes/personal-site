@@ -169,5 +169,24 @@
       }
     ],
     "errors": []
+  },
+  "directoryCleanup": {
+    "results": [
+      {
+        "lang": "zh",
+        "removedScenePicker": true,
+        "removedReturnNote": true,
+        "unapprovedNamesUnchanged": true,
+        "actMenuAndStart": true
+      },
+      {
+        "lang": "en",
+        "removedScenePicker": true,
+        "removedReturnNote": true,
+        "unapprovedNamesUnchanged": true,
+        "actMenuAndStart": true
+      }
+    ],
+    "errors": []
   }
 }

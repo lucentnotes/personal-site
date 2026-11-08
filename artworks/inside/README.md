@@ -6,7 +6,7 @@
 
 在仓库根目录运行 `python3 -m http.server 8000`，打开 `/artworks/inside/`；英文版为 `/artworks/inside/?lang=en`。也可运行 `python3 scripts/build_inside_site.py`，生成可部署的独立静态目录 `inside-dist/`。
 
-`index.html` 是整屏正式入口；`immersive-preview.html` 是兼容此前链接的相同入口。冷蓝纸纹、衬线字、平面无五官剪影。幕次目录按交接稿列出八幕，目前只开放第一幕，其余显示“待续”。第一幕内六段可单独选择。每次刷新或通过浏览器历史重新进入，都返回封面和 0 秒，不恢复上次进度。
+`index.html` 是整屏正式入口；`immersive-preview.html` 是兼容此前链接的相同入口。冷蓝纸纹、衬线字、平面无五官剪影。幕次目录按交接稿列出八幕，目前只开放第一幕，其余显示“待续”。每次刷新或通过浏览器历史重新进入，都返回封面和 0 秒，不恢复上次进度。
 
 ## 观看交互
 
@@ -32,4 +32,8 @@
 
 ## 验证
 
-`verification.json` 记录浏览器验证。检查包括中英文、三档真实播放速度、配乐播放位置与画面同步、配乐音高保持、折叠菜单、八幕可用状态、手机布局、刷新/历史返回重置，以及关键画面的实际截图。`deliverables/Revision-15-Preview.html` 汇总本轮修改截图。
+`verification.json` 记录浏览器验证。检查包括中英文、三档真实播放速度、配乐播放位置与画面同步、配乐音高保持、折叠倍速菜单、八幕可用状态、手机布局、刷新/历史返回重置，以及关键画面的实际截图。`deliverables/Revision-15-Preview.html` 汇总本轮修改截图。
+
+## 本轮界面精简
+
+目录内已移除“第一幕 · 选择片段 / Act I · Scenes”和“每次重返这里，都从头开始 / Each return begins at the beginning.”。重新进入从头开始的行为保留。英文总标题、封面字体与八幕中英文名称等待用户确认，本轮保持原名称和字体。
