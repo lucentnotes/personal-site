@@ -33,3 +33,9 @@ html[lang=en] body #ending .ending-name{font-family:'Cormorant Garamond',Georgia
 body #ending .ending-actions #replay,body #ending .ending-actions #nextAct{display:inline-flex;align-items:center;justify-content:center;min-width:148px;gap:12px;margin:0;padding:12px 8px 14px;border:0;border-bottom:1px solid #c1cdc26b;background:none;color:#d1d8cc;font-size:18px;line-height:1.5;letter-spacing:2px}
 body #ending .ending-actions #nextAct:disabled{opacity:.68;cursor:default}
 @media(max-width:650px){body #ending .ending-actions{gap:24px}body #ending .ending-actions #replay,body #ending .ending-actions #nextAct{min-width:122px;font-size:14px;padding:10px 4px 12px}html[lang=en] body #ending .ending-actions #replay,html[lang=en] body #ending .ending-actions #nextAct{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.5px}}
+
+/* Notebook closure: a small prompt at the cover edge, with keyboard slider. */
+body.immersive #interaction{left:50%;top:62%;transform:translateX(-50%);width:190px;max-width:50vw;padding:0;border:0;background:none;text-align:center;z-index:3}
+body.immersive #gestureText{font-size:17px;letter-spacing:4px;margin:0 0 18px;color:#d1d8c9}
+body.immersive #interaction input{width:100%;margin:0;touch-action:none}
+body.immersive #canvas{touch-action:none}

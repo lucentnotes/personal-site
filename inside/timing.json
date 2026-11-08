@@ -390,13 +390,13 @@
           "localEnd": 27.5,
           "read": 3.5,
           "hold": 0.5,
-          "note": "留在教室，两人各自收拾桌面；读完半秒后切车窗"
+          "note": "留在教室，两人各自收拾桌面；读完半秒后镜头沿女主的手落到尚未合上的笔记本"
         }
       ]
     },
     {
       "id": "01-06",
-      "duration": 3.5,
+      "duration": 7.5,
       "cues": [
         {
           "zh": "",
@@ -405,16 +405,25 @@
           "localEnd": 1.5,
           "read": 1.5,
           "hold": 0.0,
-          "note": "随后等待推动车窗，等待时间另计"
+          "note": "沿同一桌面推近笔记本，随后等待观众合上封面，等待时间另计"
         },
         {
           "zh": "",
           "en": "",
           "localStart": 1.5,
-          "localEnd": 3.5,
+          "localEnd": 7.5,
           "read": 2.0,
           "hold": 0.0,
-          "note": "从完成拖动起继续计时"
+          "note": "合拢轻响，教室底声收掉；短暗场起第二幕首句，再亮出异地街道"
+        },
+        {
+          "zh": "我搬到了一个听不懂周围人在说什么的地方。",
+          "en": "I moved somewhere I could not understand what people around me were saying.",
+          "localStart": 1.5,
+          "localEnd": 6.5,
+          "read": 5,
+          "hold": 0,
+          "note": "合上后短暗场起句，再亮出异地街道"
         }
       ]
     }
