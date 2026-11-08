@@ -293,5 +293,16 @@
       }
     ],
     "errors": []
+  },
+  "crowdPendingUserSelection": {
+    "state": {
+      "crowd": 0,
+      "source": false,
+      "volume": "24",
+      "opening": 0.5
+    },
+    "errors": [],
+    "oldCrowdRequested": false,
+    "candidatesIntegrated": false
   }
 }
