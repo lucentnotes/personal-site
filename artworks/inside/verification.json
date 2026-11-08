@@ -188,5 +188,69 @@
       }
     ],
     "errors": []
+  },
+  "approvedNamingAndTypography": {
+    "results": [
+      {
+        "lang": "zh",
+        "approvedTitles": true,
+        "chapterNames": [
+          "空出来的位置",
+          "纸上的房间",
+          "今晚别来",
+          "他睡过的地方",
+          "一床被子的距离",
+          "门外还在说话",
+          "下周还来吗",
+          "旧稿里的雨"
+        ],
+        "selfHostedEnglishFont": false,
+        "mobileWidths": [
+          390,
+          320
+        ],
+        "menuAndStart": true,
+        "reloadReset": true
+      },
+      {
+        "lang": "en",
+        "approvedTitles": true,
+        "chapterNames": [
+          "A Place Left Empty",
+          "A Room on Paper",
+          "Not Tonight",
+          "Where He Slept",
+          "Under One Quilt",
+          "Voices Beyond the Door",
+          "Next Week, Too?",
+          "Rain on the Page"
+        ],
+        "selfHostedEnglishFont": true,
+        "mobileWidths": [
+          390,
+          320
+        ],
+        "menuAndStart": true,
+        "reloadReset": true
+      }
+    ],
+    "errors": []
+  },
+  "offlineTypography": {
+    "results": [
+      {
+        "lang": "ZH",
+        "titleAndActNames": true,
+        "fontEmbedded": false,
+        "offlineStart": true
+      },
+      {
+        "lang": "EN",
+        "titleAndActNames": true,
+        "fontEmbedded": true,
+        "offlineStart": true
+      }
+    ],
+    "errors": []
   }
 }

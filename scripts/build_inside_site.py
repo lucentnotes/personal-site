@@ -7,4 +7,4 @@ if OUTPUT.exists():
     shutil.rmtree(OUTPUT)
 shutil.copytree(SOURCE, OUTPUT)
 (OUTPUT/'.nojekyll').touch()
-print(f'Inside, Someone: {OUTPUT}')
+print(f'What Stays: {OUTPUT}')

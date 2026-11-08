@@ -1,4 +1,4 @@
-# 《里面有人》第一幕 / Inside, Someone · Act I
+# 里面有人 / What Stays · 第一幕
 
 独立分支：`art/inside-immersive`。作品全部位于 `artworks/inside/`，作品集原有页面与发布配置保持独立。
 
@@ -32,8 +32,21 @@
 
 ## 验证
 
-`verification.json` 记录浏览器验证。检查包括中英文、三档真实播放速度、配乐播放位置与画面同步、配乐音高保持、折叠倍速菜单、八幕可用状态、手机布局、刷新/历史返回重置，以及关键画面的实际截图。`deliverables/Revision-15-Preview.html` 汇总本轮修改截图。
+`verification.json` 记录浏览器验证。检查包括中英文、三档真实播放速度、配乐播放位置与画面同步、配乐音高保持、折叠倍速菜单、八幕可用状态、手机布局、刷新/历史返回重置，以及关键画面的实际截图。`deliverables/Revision-17-Preview.html` 汇总本轮修改截图。
 
 ## 本轮界面精简
 
-目录内已移除“第一幕 · 选择片段 / Act I · Scenes”和“每次重返这里，都从头开始 / Each return begins at the beginning.”。重新进入从头开始的行为保留。英文总标题、封面字体与八幕中英文名称等待用户确认，本轮保持原名称和字体。
+目录内已移除“第一幕 · 选择片段 / Act I · Scenes”和“每次重返这里，都从头开始 / Each return begins at the beginning.”。重新进入从头开始的行为保留。英文总标题、封面字体与幕名已按后续确认更新，见下节。
+
+## 已确认名称与英文封面
+
+英文总标题为 What Stays。封面采用本地托管 Cormorant Garamond Regular，What / Stays 两行，收紧行距和字距；入口为小号无衬线字。字体与 OFL 许可位于 assets/fonts/，离线文件内嵌字体与许可。
+
+1. 空出来的位置 / A Place Left Empty
+2. 纸上的房间 / A Room on Paper
+3. 今晚别来 / Not Tonight
+4. 他睡过的地方 / Where He Slept
+5. 一床被子的距离 / Under One Quilt
+6. 门外还在说话 / Voices Beyond the Door
+7. 下周还来吗 / Next Week, Too?
+8. 旧稿里的雨 / Rain on the Page
