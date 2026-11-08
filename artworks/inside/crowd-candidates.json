@@ -1,5 +1,5 @@
 {
-  "status": "A_selected_remote_playback_configured",
+  "status": "self_hosted_selected",
   "integrated": true,
   "candidates": [
     {
@@ -33,9 +33,23 @@
       "approved": false
     }
   ],
-  "selected": "A",
-  "delivery": "browser_direct_remote_audio",
-  "offlineEmbedded": false,
-  "sourcePlaybackVerified": false,
-  "mediaURL": "https://cdn.freesound.org/previews/757/757318_300738-hq.mp3"
+  "selected": "2-distant",
+  "delivery": "same_origin_bundled_audio",
+  "offlineEmbedded": true,
+  "sourcePlaybackVerified": true,
+  "mediaURL": "assets/ballroom-crowd.mp3",
+  "selectedSource": {
+    "originalTitle": "S13-05 Light cafe background walla; could be party; some cuts",
+    "author": "craigsmith",
+    "license": "CC0-1.0",
+    "originalSource": "https://freesound.org/people/craigsmith/sounds/675073/",
+    "downloadSource": "https://raw.githubusercontent.com/BrenoBertucci/Terrarium/HEAD/assets/audio/town.ogg",
+    "sameRecordingVariants": true,
+    "integratedIntoFilm": false,
+    "files": {
+      "3-muted.mp3": "1009f3e43621a75215157b648573da8f384e8bc3df759a94fc705a7afb5c2cd9",
+      "1-natural.mp3": "6c6ee7852ee9245ea3a0648862052e8a413165875ec2df8e73a432efecbba3a6",
+      "2-distant.mp3": "7397ee8d1efa0de9980e35296ea04aaf0c9c28864520aeec03956cc33701fcaa"
+    }
+  }
 }
