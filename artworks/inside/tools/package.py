@@ -14,7 +14,7 @@ for lang in ['zh', 'en']:
         if name == 'film.js':
             js = js.replace("lang=new URLSearchParams(location.search).get('lang')==='en'?'en':'zh'", f"lang='{lang}'")
         page = page.replace(f'<script src="{name}"></script>', '<script>'+js+'</script>')
-    for asset in ['ballroom-crowd.mp3', 'party.png', 'party-empty.png', 'bedroom.jpg', 'inside-piano.mp3', 'inside-piano-125.mp3', 'inside-piano-15.mp3', 'inside-piano-2.mp3', 'fonts/cormorant-garamond.ttf']:
+    for asset in ['ballroom-crowd.mp3', 'party.png', 'party-empty.png', 'bedroom.jpg', 'inside-piano.mp3', 'inside-piano-125.mp3', 'inside-piano-15625.mp3', 'inside-piano-1875.mp3', 'inside-piano-25.mp3', 'fonts/cormorant-garamond.ttf']:
         mime = mimetypes.guess_type(asset)[0] or 'application/octet-stream'
         page = page.replace('assets/'+asset, 'data:'+mime+';base64,'+base64.b64encode((ROOT/'assets'/asset).read_bytes()).decode())
     page = page.replace('index.html?lang=zh', 'Inside-Act-I-ZH.html').replace('index.html?lang=en', 'Inside-Act-I-EN.html').replace('href="index.html"', f'href="Inside-Act-I-{lang.upper()}.html"')
