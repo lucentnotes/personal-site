@@ -10,6 +10,10 @@ const clamp=(n,a=0,b=1)=>Math.max(a,Math.min(b,n)),ease=n=>{n=clamp(n);return n*
 // Shared bilingual clock; handoff (4) opening/ending plus approved user edits.
 const cues=[],scenes=[];let clock=0;
 for(const [si,shot]of timingData.shots.entries()){scenes.push({start:clock,end:clock+shot.duration});for(const [i,c]of shot.cues.entries())if(c.zh)cues.push({...c,scene:si,line:i,text:EN?c.en:c.zh,start:clock+c.localStart,end:clock+c.localEnd});clock+=shot.duration;}
+// Five seconds of visual preparation before the new relationship.
+const bridgeAt=scenes[4].start+20.5;
+for(const c of cues)if(c.start>=bridgeAt){c.start+=5;c.end+=5;}
+scenes[4].end+=5;scenes[5].start+=5;scenes[5].end+=5;clock+=5;
 const duration=clock,interactionTime=scenes[5].start+1.5;
 function where(time){const i=scenes.findIndex(s=>time<s.end);return i<0?5:i;}
 function cueNow(){return cues.find(c=>t>=c.start&&t<c.end);}
@@ -17,7 +21,7 @@ function at(scene,line){return scenes[scene].start+timingData.shots[scene].cues[
 function wordTime(scene,p,word){const c=cues.find(c=>c.scene===scene&&(c.zh.includes(word)||c.en.includes(word)));if(!c)return scenes[scene].start;const str=c.zh.includes(word)?c.zh:c.en;return c.start+(c.read||c.end-c.start)*str.indexOf(word)/Math.max(str.length,1);}
 function cueStart(scene,fragment){const c=cues.find(c=>c.scene===scene&&c.zh.includes(fragment));if(!c)throw Error('Missing cue: '+fragment);return c.start;}
 const marks={lift:at(0,7),hesitate:wordTime(0,0,'犹豫'),returnTable:at(0,9),slow:at(1,2),empty:scenes[2].start+4.5,notes:cueStart(3,'后来我把'),store:cueStart(3,'手机在口袋'),checkPhone:cueStart(3,'我还是等走出'),dream:cueStart(3,'那个梦'),walk:cueStart(3,'黑色西装'),sit:cueStart(3,'我们坐在一起'),touch:cueStart(3,'随后他的手'),wake:scenes[3].end,sideStart:at(4,1)+.5,face:at(4,2),turnBack:at(4,3)+.35,lookAgain:at(4,3)+1.9,phone:at(4,4)};
-marks.pour=marks.hesitate+.65;marks.returnStart=marks.returnTable-1.8;marks.bin=marks.returnTable;marks.vibrate=marks.store+.35;marks.urge=marks.store+1.5;marks.change=marks.store+1.7;marks.exitStart=marks.change+2.3;marks.outsidePhone=marks.checkPhone+4.5;marks.scan=marks.store+.9;marks.musicReturn=marks.touch+.95;marks.kiss=marks.touch+2.5;marks.bagPickup=marks.change+1.15;marks.swipeEnd=marks.outsidePhone+2;marks.blankHoldEnd=marks.swipeEnd+6;marks.tableStart=cueStart(0,'不知道从什么时候');marks.wideTable=marks.tableStart;marks.classroom=marks.phone;marks.musicOutStart=marks.exitStart+(marks.outsidePhone-marks.exitStart)*.55;
+marks.pour=marks.hesitate+.65;marks.returnStart=marks.returnTable-1.8;marks.bin=marks.returnTable;marks.vibrate=marks.store+.35;marks.urge=marks.store+1.5;marks.change=marks.store+1.7;marks.exitStart=marks.change+2.3;marks.outsidePhone=marks.checkPhone+4.5;marks.scan=marks.store+.9;marks.musicReturn=marks.touch+.95;marks.kiss=marks.touch+2.5;marks.bagPickup=marks.change+1.15;marks.swipeEnd=marks.outsidePhone+2;marks.blankHoldEnd=marks.swipeEnd+6;marks.tableStart=cueStart(0,'不知道从什么时候');marks.wideTable=marks.tableStart;marks.classroom=marks.phone-3;marks.musicOutStart=marks.exitStart+(marks.outsidePhone-marks.exitStart)*.55;
 function fmt(x){x=Math.floor(x);return `${String(Math.floor(x/60)).padStart(2,'0')}:${String(x%60).padStart(2,'0')}`;}
 function rect(x,y,w,h,c){g.fillStyle=c;g.fillRect(x,y,w,h)}
 function line(x,y,x2,y2,c,w=1){g.strokeStyle=c;g.lineWidth=w;g.beginPath();g.moveTo(x,y);g.lineTo(x2,y2);g.stroke()}
@@ -104,7 +108,7 @@ function classroom(){
  g.save();g.translate((720-490*4.6)*zoom,(470-550*4.6)*zoom);g.scale(1+3.6*zoom,1+3.6*zoom);
  rect(0,0,1440,900,'#61757b');rect(260,95,720,240,'#3b575e');rect(275,110,690,210,'#48666b');rect(1090,55,290,410,'#8b9f9e');line(1230,55,1230,465,'#4a6870',10);rect(0,610,1440,290,'#374e59');
  const pack=(x,role,face,phase)=>{const move=Math.sin(Math.min(q,6)*1.5+phase)*.5+.5,reach=ease((q-3)/3);person(x,695,1.5,0,0,role==='heroine'?'#172b38':'#1b2f3b',face,role,0,false);poly([[x-42,510],[x+173,510],[x+195,575],[x-65,575]],'#8b9e96');rect(x-65,575,260,20,'#a1aa99');rect(x-48,595,12,205,'#29434e');rect(x+166,595,12,205,'#29434e');if(role==='heroine')notebook(x+60,550,1,ref);else{rect(x+23,559,75,12,'#c0bca2');rect(x+30,554,64,5,'#7e9492');}if(role==='secondMan'){const settle=move*3;limb([x-43,478],[x-48,525],[x+20,552-settle],16,'#1b2f3b');limb([x+43,478],[x+57,526],[x+68,551+settle],16,'#1b2f3b');g.save();g.translate(x+20,552-settle);g.rotate(-1.3);hand(0,0,'#1b2f3b');g.restore();hand(x+68,551+settle,'#1b2f3b',-.7);}else{const settle=(1-reach)*move*3,c='#172b38';limb([x-32,478],[x-40,520],[x-5,547-settle],13,c);limb([x+32,478],[x+54,516],[x+88,528+settle],13,c);hand(x-5,547-settle,c,-1.05);hand(x+88,528+settle,c,-1.15);}};
- pack(430,'heroine',1,0);pack(925,'secondMan',-1,1.9);g.restore();
+ pack(430,'heroine',1,0);if(q>=2){const enter=ease((q-2)/3);g.save();g.translate((1-enter)*380,0);g.globalAlpha=enter;pack(925,'secondMan',-1,1.9);g.restore();}g.restore();
  if(reflectionDone){const elapsed=t-interactionTime;rect(0,0,1440,900,'#10232f');if(elapsed>2){g.save();g.globalAlpha=ease((elapsed-2)/1.1);supermarket();g.restore();}}
 }
 
@@ -158,7 +162,7 @@ $('crowdAudio')?.addEventListener('error',()=>{crowdLoadError=true;});
 function waitingForReflection(){return started&&where(t)===5&&t>=interactionTime&&!reflectionDone&&!finished;}
 function musicExitProgress(){return musicExitAt?clamp((performance.now()-musicExitAt)/2000):0;}
 function scoreEnvelope(){return 1;}
-function scoreTargetTime(){return t;}
+function scoreTargetTime(){return t<bridgeAt?t:t<bridgeAt+5?bridgeAt:t-5;}
 
 function scorePlayhead(){if(!audio)return 0;if(!audio._scoreSource)return audio._scoreLastOffset||0;const d=audio._scoreBuffer.duration;return(audio._scoreStartOffset+(audio.currentTime-audio._scoreStartClock)*audio._scoreClockRate)%d;}
 function stopScore(){if(!audio?._scoreSource)return;audio._scoreLastOffset=scorePlayhead();audio._scoreSource.stop();audio._scoreSource.disconnect();audio._scoreSource=null;}
