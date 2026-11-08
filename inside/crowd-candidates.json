@@ -1,0 +1,41 @@
+{
+  "status": "A_selected_remote_playback_configured",
+  "integrated": true,
+  "candidates": [
+    {
+      "id": "A",
+      "title": "中距离室内交谈",
+      "originalTitle": "Generic Interior Walla",
+      "author": "brunoboselli",
+      "source": "https://freesound.org/people/brunoboselli/sounds/757318/",
+      "description": "会议茶歇中距离录音，模糊的多人交谈，主要为英语。",
+      "license": "CC0-1.0",
+      "approved": true
+    },
+    {
+      "id": "B",
+      "title": "带大厅回声的聚会人声",
+      "originalTitle": "Evening reception crowd.mp3",
+      "author": "brigitte.perchiste",
+      "source": "https://freesound.org/people/brigitte.perchiste/sounds/529801/",
+      "description": "活动结束后的多人交谈，大理石大厅回声较明显，语言为德语。",
+      "license": "CC0-1.0",
+      "approved": false
+    },
+    {
+      "id": "C",
+      "title": "远处人群与脚步",
+      "originalTitle": "USC Busy Reception Hall, Distant Walla",
+      "author": "CHallSmith",
+      "source": "https://freesound.org/people/CHallSmith/sounds/870659/",
+      "description": "石质接待大厅里的远距离人群声，包含一些脚步。",
+      "license": "CC0-1.0",
+      "approved": false
+    }
+  ],
+  "selected": "A",
+  "delivery": "browser_direct_remote_audio",
+  "offlineEmbedded": false,
+  "sourcePlaybackVerified": false,
+  "mediaURL": "https://cdn.freesound.org/previews/757/757318_300738-hq.mp3"
+}
