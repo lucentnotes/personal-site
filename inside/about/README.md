@@ -9,3 +9,7 @@ Bilingual content includes concept, authorship, two evidenced decisions, review 
 All scene images are raw Canvas captures, with the old window scene drawn from historical source commit 253a295 and current scenes from the implemented main runtime. Notebook video is an actual browser recording, silent, demonstrating partial drag rebound and completed closure. No generated concept art is used.
 
 Local checks: both languages, 1440 desktop, 390/320 mobile no horizontal overflow; internal links and fonts load; notebook video is present. No global portfolio navigation or main player files were changed for this preview.
+
+## Focused narrative revision
+
+The page follows one argument: original writing → a specific design decision → how AI-assisted work implemented that decision. A compact hero gives authorship, scope and entry. A single primary case contrasts the old window with the notebook recording. The four-step workflow uses the same case and distinguishes author decisions from AI implementation. Sound is secondary; details and implementation tools start collapsed. Shared cold-blue palette and header typography remain unchanged. Local QA covered English/Chinese, 1440px desktop, 390/320px mobile, working links, disclosure controls, video playback and repeated language switching. Default desktop page height reduced from approximately 5,300px to 3,340px at the same viewport.
