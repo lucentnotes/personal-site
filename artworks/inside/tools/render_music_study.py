@@ -1,6 +1,7 @@
 from pathlib import Path
-import subprocess,ctypes as C,ctypes.util,wave,json,numpy as np,shutil
+import subprocess,ctypes as C,ctypes.util,wave,json,numpy as np,shutil,tempfile
 root=Path(__file__).resolve().parents[1];out=root/'music-study';out.mkdir(exist_ok=True)
+work=Path(tempfile.mkdtemp(prefix='inside-music-study-'))
 # Reuse the existing, locally authored note scheduler and documented instrument.
 source=(root/'tools/render_score.py').read_text();prefix=source[:source.index('for n in range(16):')];exec(prefix)
 # New accompaniment: selected notes from the same voicings, without the repeating melody.
@@ -33,10 +34,12 @@ for end in [103.5,189]:
 # Small roll-offs for newly introduced sparse sections.
 for a in [84.5,93.5,112.5,176.5]:
  mask=(x>=a)&(x<a+.35);track[mask]*=smooth((x[mask]-a)/.35)[:,None]
-with wave.open('/workspace/work/music-study-render/arranged.wav','wb') as w:w.setnchannels(2);w.setsampwidth(2);w.setframerate(sr);w.writeframes((np.clip(track,-1,1)*32767).astype('<i2').tobytes())
+with wave.open(str(work/'arranged.wav'),'wb') as w:w.setnchannels(2);w.setsampwidth(2);w.setframerate(sr);w.writeframes((np.clip(track,-1,1)*32767).astype('<i2').tobytes())
 for rate,suffix in [(1,'original-clock'),(1.25,'125'),(1.5625,'15625'),(1.875,'1875'),(2.5,'25')]:
- subprocess.run(['ffmpeg','-y','-v','error','-i','/workspace/work/music-study-render/arranged.wav','-af',f'atempo={rate}','-b:a','128k',str(out/f'score-{suffix}.mp3')],check=True)
+ subprocess.run(['ffmpeg','-y','-v','error','-i',str(work/'arranged.wav'),'-af',f'atempo={rate}','-b:a','128k',str(out/f'score-{suffix}.mp3')],check=True)
 shutil.copy('/usr/share/doc/timgm6mb-soundfont/copyright',out/'instrument-source-license.txt');shutil.copy('/usr/share/common-licenses/GPL-2',out/'GPL-2.txt')
 manifest={'status':'audition_only_not_main_film','baseSpeed':1.25,'durationSecondsAtNew1x':191/1.25,'composition':'Project-authored note sequences in tools/render_score.py; no external song used','instrument':'TimGM6mb.sf2','instrumentLicense':'GPL-2, documented sample provenance; see instrument-source-license.txt','source':'https://github.com/musescore/musescore-old/commit/90c33ef9d87b3f5ff92efd3b07d89eb455fb1fef','arrangement':[['0–34','Original opening, fade in then leave'],['34–84.5','No score: rice/room/platform/bus foley'],['84.5–103.5','Sparse bass and isolated upper notes'],['103.5–112.5','No score: typing'],['112.5–121.5','Light voicing, exit fade ends outside shop'],['121.5–145.45','No score: phone and ballroom crowd'],['145.45–160','Exact original track opening at neck touch; no accent boost'],['160–176.5','No score: mistaken recognition'],['176.5–189','Sparse classroom voicing; gesture wait separately loops quietly']],'arrangementTimes':'original logical timeline; divide by 1.25 for default viewing time'}
 (out/'sources.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 print('Rendered full audition arrangement, 152.8 sec at new 1x')
+
+shutil.rmtree(work)
