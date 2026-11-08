@@ -12,5 +12,6 @@ for name in ('index.html', 'immersive-preview.html', 'style.css', 'immersive.css
     shutil.copy2(SOURCE/name, OUTPUT/name)
 shutil.copytree(SOURCE/'assets', OUTPUT/'assets',
                 ignore=shutil.ignore_patterns('ballroom-murmur.mp3'))
+shutil.copytree(SOURCE/'audition', OUTPUT/'audition')
 (OUTPUT/'.nojekyll').touch()
 print(f'What Stays: {OUTPUT}')
