@@ -1,6 +1,6 @@
 # 正式站点
 
-入口：https://suojin311-creator.github.io/eportfolio/professional-insights/
+入口：https://suojin311-creator.github.io/lucy-yu/professional-insights/
 
 发布范围为中英文各一个入口页和四篇独立文章页，共十页。默认入口为英文；中文版位于 `/professional-insights/zh/`。根路径与 `/work-log/` 始终跳转到英文入口。旧工作 Log 和其他历史页面不在发布产物中。
 

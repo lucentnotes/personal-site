@@ -1,6 +1,6 @@
 # Professional Insights
 
-正式入口：https://suojin311-creator.github.io/eportfolio/professional-insights/
+正式入口：https://suojin311-creator.github.io/lucy-yu/professional-insights/
 
 当前发布中英文各一个入口页和四个独立文章页。默认英文，所有页面右上角均可切换语言；中文版位于 `/professional-insights/zh/`。切换对应到同一篇文章，返回列表和上下篇导航保持当前语言。根地址和旧 `/work-log/` 链接始终跳转到英文入口，不按浏览器语言或历史选择自动切换。
 
