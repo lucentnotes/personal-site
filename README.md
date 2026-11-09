@@ -1,6 +1,6 @@
 # 个人网站：工作 Log
 
-正式站点：https://suojin311-creator.github.io/eportfolio/
+正式站点：https://suojin311-creator.github.io/lucy-yu/
 
 当前仅发布一篇工作 Log：**产品被认可之后，谁负责让它起作用？** 首页直接展示全文，暂不发布个人首页、项目列表或其他案例。
 

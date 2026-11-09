@@ -6,10 +6,10 @@
 这是作品的视频版本，使用中文字幕，无人声旁白。结尾的合书交互以自动演示呈现。
 
 想亲手体验这个故事：
-https://suojin311-creator.github.io/eportfolio/inside/?lang=zh
+https://suojin311-creator.github.io/lucy-yu/inside/?lang=zh
 
 创作背景与制作过程：
-https://suojin311-creator.github.io/eportfolio/inside/about/zh/
+https://suojin311-creator.github.io/lucy-yu/inside/about/zh/
 
 —— 制作 ——
 原创小说、叙事与交互方向、创作与制作：借我800到火星
