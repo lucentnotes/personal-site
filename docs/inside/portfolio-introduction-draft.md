@@ -21,7 +21,7 @@
 
 主要入口：开始体验第一幕。
 次要入口：查看制作过程（页内跳转）。
-正式地址：https://suojin311-creator.github.io/lucy-yu/inside/
+正式地址：https://suojin311-creator.github.io/personal-site/inside/
 
 ## 为什么做
 
