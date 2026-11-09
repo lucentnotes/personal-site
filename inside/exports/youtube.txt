@@ -8,10 +8,10 @@ Act I: A Place Left Empty / 空出来的位置
 This is the linear video edition, with Chinese subtitles and no voiceover. The notebook interaction at the end is demonstrated automatically.
 
 Play the interactive edition:
-https://suojin311-creator.github.io/eportfolio/inside/?lang=zh
+https://suojin311-creator.github.io/lucy-yu/inside/?lang=zh
 
 About the project and its creative process:
-https://suojin311-creator.github.io/eportfolio/inside/about/
+https://suojin311-creator.github.io/lucy-yu/inside/about/
 
 CREATED BY
 借我800到火星 — original fiction, narrative and interaction direction, creative direction and production.
