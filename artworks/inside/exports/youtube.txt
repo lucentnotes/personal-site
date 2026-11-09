@@ -1,0 +1,42 @@
+Title: What Stays — Act I: A Place Left Empty | Chinese Subtitles
+
+Writing is part of my everyday life. For this project, I adapted my own fiction into images, sound and a few reader-controlled gestures, exploring another way to experience a story.
+
+What Stays / 里面有人
+Act I: A Place Left Empty / 空出来的位置
+
+This is the linear video edition, with Chinese subtitles and no voiceover. The notebook interaction at the end is demonstrated automatically.
+
+Play the interactive edition:
+https://suojin311-creator.github.io/eportfolio/inside/?lang=zh
+
+About the project and its creative process:
+https://suojin311-creator.github.io/eportfolio/inside/about/
+
+CREATED BY
+借我800到火星 — original fiction, narrative and interaction direction, creative direction and production.
+
+AI-ASSISTED WORKFLOW
+ChatGPT: design discussions and production handoffs.
+Codex: prototype development, animation and interaction implementation, debugging and video export.
+Implementation and processing: HTML, CSS, JavaScript, Canvas, Web Audio API and FFmpeg.
+
+MUSIC
+“Reverie” by Scott Buckley — released under CC BY 4.0.
+https://www.scottbuckley.com.au/library/reverie/
+
+“Moonlight” by Scott Buckley — released under CC BY 4.0.
+https://www.scottbuckley.com.au/library/moonlight/
+
+www.scottbuckley.com.au
+License: https://creativecommons.org/licenses/by/4.0/
+The recordings were edited into excerpts with level changes and fades.
+
+CROWD AMBIENCE
+“S13-05 Light cafe background walla; could be party; some cuts” by craigsmith, released under CC0.
+https://freesound.org/people/craigsmith/sounds/675073/
+Other ambience and foley were synthesised using Web Audio API.
+
+Headphones recommended.
+
+#VisualEssay #InteractiveFiction #ChineseSubtitles

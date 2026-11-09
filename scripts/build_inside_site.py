@@ -15,6 +15,8 @@ shutil.copytree(SOURCE/'assets', OUTPUT/'assets',
 shutil.copytree(SOURCE/'audition', OUTPUT/'audition')
 shutil.copytree(SOURCE/'licensed-score', OUTPUT/'licensed-score')
 shutil.copytree(SOURCE/'about', OUTPUT/'about')
+if (SOURCE/'exports').exists():
+    shutil.copytree(SOURCE/'exports', OUTPUT/'exports')
 # Content hashes prevent a returning viewer from running an earlier scene script.
 for entry in ('index.html', 'immersive-preview.html'):
     text = (OUTPUT/entry).read_text()

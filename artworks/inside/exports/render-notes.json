@@ -1,0 +1,23 @@
+{
+  "language": "zh",
+  "author": "借我800到火星",
+  "export": "1920x1080, H264, AAC, 30fps",
+  "nativeAnimationClockSpeed": 1.25,
+  "linearAdaptation": "3.5 sec title, automatic 2.6 sec notebook gesture, 12 sec ending/credits; website UI removed",
+  "audio": "Live Web Audio master with score, foley, ambience and local crowd recording; two-pass loudness adjustment to -20 LUFS / -1.5 dBTP",
+  "source": "Current Act I with corrected notebook demonstration drawing",
+  "sourceWebmSeconds": "174.994000",
+  "outputBytes": 20239684,
+  "loudnessInput": {
+    "input_i": "-36.28",
+    "input_tp": "-19.41",
+    "input_lra": "10.60",
+    "input_thresh": "-46.79",
+    "output_i": "-20.65",
+    "output_tp": "-3.23",
+    "output_lra": "12.30",
+    "output_thresh": "-31.16",
+    "normalization_type": "dynamic",
+    "target_offset": "0.65"
+  }
+}
