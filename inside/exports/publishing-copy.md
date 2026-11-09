@@ -14,10 +14,10 @@
 这是作品的视频版本，使用中文字幕，无人声旁白。结尾的合书交互以自动演示呈现。
 
 想亲手体验这个故事：
-https://suojin311-creator.github.io/lucy-yu/inside/?lang=zh
+https://suojin311-creator.github.io/personal-site/inside/?lang=zh
 
 创作背景与制作过程：
-https://suojin311-creator.github.io/lucy-yu/inside/about/zh/
+https://suojin311-creator.github.io/personal-site/inside/about/zh/
 
 —— 制作 ——
 原创小说、叙事与交互方向、创作与制作：借我800到火星
@@ -57,10 +57,10 @@ Act I: A Place Left Empty / 空出来的位置
 This is the linear video edition, with Chinese subtitles and no voiceover. The notebook interaction at the end is demonstrated automatically.
 
 Play the interactive edition:
-https://suojin311-creator.github.io/lucy-yu/inside/?lang=zh
+https://suojin311-creator.github.io/personal-site/inside/?lang=zh
 
 About the project and its creative process:
-https://suojin311-creator.github.io/lucy-yu/inside/about/
+https://suojin311-creator.github.io/personal-site/inside/about/
 
 CREATED BY
 借我800到火星 — original fiction, narrative and interaction direction, creative direction and production.
