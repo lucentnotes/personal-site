@@ -56,7 +56,7 @@ function setLanguage(lang){
  try{localStorage.setItem('gts-case-language',lang)}catch{}
 }
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
-let initialLanguage='zh';try{initialLanguage=localStorage.getItem('gts-case-language')||'zh'}catch{}
+const initialLanguage = new URLSearchParams(location.search).get('lang') === 'zh' ? 'zh' : 'en';
 setLanguage(initialLanguage);
 
 const recordViewer=document.querySelector('#record-viewer');
