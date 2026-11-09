@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / 'content/professional-insights'
 PAGES = ROOT / 'public/professional-insights'
 SLUGS = ['real-world-adoption', 'parents-expectations', 'ai-product-experience', 'purchase-and-educational-value']
-BASE = 'https://suojin311-creator.github.io/lucy-yu/professional-insights/'
+BASE = 'https://suojin311-creator.github.io/personal-site/professional-insights/'
 
 def release_version():
     """Change document URLs when copy, layout, or navigation changes."""
