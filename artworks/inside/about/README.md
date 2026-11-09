@@ -17,3 +17,7 @@ The page follows one argument: original writing â†’ a specific design decision â
 ## Introduction cleanup
 
 Removed the category prefix in the hero, secondary jump link and redundant explanatory notes in both languages. Tools disclosure starts open. The notebook demonstration is re-recorded with retracting hands, corrected cover/arm occlusion and simplified palm contours; the scoped drawing source is media-source/notebook-demo.js. The main artwork runtime is unchanged. Video and poster references carry content hashes to avoid stale media.
+
+## English typography
+
+English headings now use the existing local Manrope font. Desktop title 64px, section titles 32px, lead body 17px, reading copy 16px, and workflow text 15px; line lengths and balanced heading wraps are adjusted for English. Mobile title 46px and body 16px. Header wordmark and Chinese text sizes retain their previous settings. Text arrows in primary buttons are replaced by inline SVG to avoid fallback glyph failures. Checks cover 1440/1024/768/390/320 layouts and Chinese regression.
