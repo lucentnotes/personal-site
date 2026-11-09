@@ -1,6 +1,6 @@
 # Gaming the System: independent case page
 
-- Public URL: https://suojin311-creator.github.io/lucy-yu/gaming-the-system/
+- Public URL: https://suojin311-creator.github.io/personal-site/gaming-the-system/
 - Source: `public/gaming-the-system/`.
 - Build: `python3 scripts/build_game_case.py`.
 - Output: `case-dist/gaming-the-system/`.

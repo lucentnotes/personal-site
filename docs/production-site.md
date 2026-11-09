@@ -1,6 +1,6 @@
 # 正式站点
 
-正式地址：https://suojin311-creator.github.io/lucy-yu/
+正式地址：https://suojin311-creator.github.io/personal-site/
 
 目前唯一内容为已确认的工作 Log。没有独立首页或其他项目页。旧的 `/work-log/` 地址仅跳转到根地址，保留查询参数和锚点。
 
