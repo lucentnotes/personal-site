@@ -4,4 +4,4 @@ Download `What-Stays-Cloudflare.zip`, then use Cloudflare Workers & Pages → Cr
 
 English is the default; Chinese uses ?lang=zh. The section menu links back to the personal website. Existing music credits and license records are preserved.
 
-SHA-256: e59de30dd112232193295b47c43b662f01b8e0bca287cb077f2487ae1d2ab535
+SHA-256: 785c3ce6fda31eb6f6f5be3215d36d21beff33941ffe2a07bb5aa7c1e14ece1c
