@@ -5,7 +5,7 @@ import shutil
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'public' / 'work-log'
 OUTPUT = ROOT / 'site-dist'
-URL = 'https://suojin311-creator.github.io/personal-site/'
+URL = 'https://lucentnotes.github.io/personal-site/'
 
 assert SOURCE.is_dir()
 # This generated output is deliberately separate from the historical Vite build.
